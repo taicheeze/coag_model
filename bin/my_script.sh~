@@ -1,0 +1,10 @@
+#!/bin/bash
+# My first script
+
+make coagulationo3
+if $?; then
+make runcoagulation
+elif
+echo "error compiling" >&2
+exit 1
+fi

@@ -1,0 +1,64 @@
+#ifndef _INITIAL_CONCENTRATIONS_H_
+#define _INITIAL_CONCENTRATIONS_H_
+
+#include <petscsys.h>
+
+#define NUMBER_OF_SPECIES_IN_VOLUME     35
+#define NUMBER_OF_SPECIES_ON_SURFACE    54
+
+/* VOLUME SPECIES: 
+ *
+ *  1-5.       VII,                VIIa,               Xa,                 IIa,                X,                  
+ *  6-10.      IX,                 IXa,                II,                 VIII,               VIIIa,              
+ *  11-15.     VIIIa1L,            VIIIa2,             V,                  Va,                 mIIa,               
+ *  16-20.     TFPI,               XaTFPI,             ATIII,              XaATIII,            mIIaATIII,          
+ *  21-25.     IXaATIII,           IIaATIII,           substrate,          fluorescence,       APC,                
+ *  26-30.     APCVa,              Va5,                Va3,                APCVa5,             APCVa3,             
+ *  31-35.     Va53,               HCF,                LCA1,               APCLCA1,            PC,                 
+ */
+
+const PetscReal VOLUME_INITIAL_CONCENTRATIONS[NUMBER_OF_SPECIES_IN_VOLUME]
+        = {  1.0000e-08,  1.0000e-10,  0.0000e+00,  0.0000e+00,  1.6000e-07,
+             9.0000e-08,  0.0000e+00,  1.4000e-06,  7.0000e-10,  0.0000e+00,
+             0.0000e+00,  0.0000e+00,  2.0000e-08,  0.0000e+00,  0.0000e+00,
+             2.5000e-09,  0.0000e+00,  3.4000e-06,  0.0000e+00,  0.0000e+00,
+             0.0000e+00,  0.0000e+00,  1.0000e-06,  0.0000e+00,  0.0000e+00,
+             0.0000e+00,  0.0000e+00,  0.0000e+00,  0.0000e+00,  0.0000e+00,
+             0.0000e+00,  0.0000e+00,  0.0000e+00,  0.0000e+00,  6.5000e-08
+           };
+
+
+/* SURFACE SPECIES: 
+ *
+ *  1-5.       TF,                 TFVII,              TFVIIa,             TFVIIaX,            TFVIIaXa,           
+ *  6-10.      TFVIIaIX,           TFVIIaXaTFPI,       TFVIIaATIII,        P9,                 IXP9,               
+ *  11-15.     IXaP9,              P9s,                IXaP9s,             P10,                XP10,               
+ *  16-20.     XaP10,              P5,                 VP5,                VaP5,               P8,                 
+ *  21-25.     VIIIP8,             VIIIaP8,            P2,                 IIP2,               IIaP2,              
+ *  26-30.     VP5XaP10,           VIIIP8XaP10,        IXaP9VIIIaP8,       IXaP9VIIIaP8XP10,   IXaP9sVIIIaP8,      
+ *  31-35.     IXaP9sVIIIaP8XP10,  XaP10VaP5,          XaP10VaP5IIP2,      mIIaP2,             VIIIa1LP8,          
+ *  36-40.     IXaP9VIIIaP8X,      XaP10VaP5II,        IXaP9sVIIIaP8X,     Va3P5,              Va5P5,              
+ *  41-45.     Va53P5,             XaP10Va3P5,         XaP10Va5P5,         XaP10Va5P5IIP2,     XaP10Va3P5IIP2,     
+ *  46-50.     XaP10Va53P5,        XaP10Va53P5IIP2,    IIP2VaP5,           TM,                 TMIIa,              
+ *  51-54.     TMmIIa,             TMIIaPC,            TMmIIaPC,           TMIIaAPC,           
+ */
+
+const PetscReal VOLUME_INITIAL_CONCENTRATIONS[NUMBER_OF_SPECIES_IN_VOLUME]
+        = {  5.0000e-08,  0.0000e+00,  0.0000e+00,  0.0000e+00,  0.0000e+00,
+             0.0000e+00,  0.0000e+00,  0.0000e+00,  1.0379e-11,  0.0000e+00,
+             0.0000e+00,  1.0379e-11,  0.0000e+00,  1.1209e-10,  0.0000e+00,
+             0.0000e+00,  1.2454e-10,  0.0000e+00,  0.0000e+00,  1.8682e-11,
+             0.0000e+00,  0.0000e+00,  8.3029e-11,  0.0000e+00,  0.0000e+00,
+             0.0000e+00,  0.0000e+00,  0.0000e+00,  0.0000e+00,  0.0000e+00,
+             0.0000e+00,  0.0000e+00,  0.0000e+00,  0.0000e+00,  0.0000e+00,
+             0.0000e+00,  0.0000e+00,  0.0000e+00,  0.0000e+00,  0.0000e+00,
+             0.0000e+00,  0.0000e+00,  0.0000e+00,  0.0000e+00,  0.0000e+00,
+             0.0000e+00,  0.0000e+00,  0.0000e+00,  1.0000e-09,  0.0000e+00,
+             0.0000e+00,  0.0000e+00,  0.0000e+00,  0.0000e+00
+           };
+
+
+#define NUMBER_OF_REACTIONS_IN_VOLUME    30
+#define NUMBER_OF_REACTIONS_ON_SURFACE   137
+
+#endif

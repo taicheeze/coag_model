@@ -1,0 +1,41 @@
+#%%
+import matplotlib.pyplot as plt
+import numpy
+times = []
+meanconc = []
+for i in range (1,301):
+    f = open('../output/concentrations_{0}.m'.format(i))
+
+    f.readline()
+
+    times.append(float(f.readline()))
+
+    f.readline()
+    f.readline()
+    vals = []
+    vals2 = []
+
+    for line in f.readlines():
+        try:
+            val = float(line)
+            vals.append(val)
+        except:
+            break
+
+    f.close()
+
+    vals = numpy.array(vals)
+    vals2 = numpy.reshape(vals, (25, 50))
+    vals3 = vals2[0:15, 9:20]
+    meanval = numpy.mean(vals3)
+    meanconc.append(meanval)
+maxval=numpy.amax(meanconc)
+float(maxval)
+endval=meanconc[-1]
+float(endval)
+f = open('./outfile.dat','a')
+if maxval > 2e-3 and endval < maxval/3:
+    f.write("1\n")
+else:
+    f.write("0\n")
+#plt.imshow(vals2)

@@ -1,0 +1,280 @@
+#Constants
+amplifier_on = 1
+amplifier_off = 1
+modifier = .001[m]
+D = 5e-11[m^2/s]
+NA = 6.022e23
+PL = (1/(40e-12*NA))[mol/m^2]
+dilution = 1
+
+#initial values
+P2_init = 2000*PL
+P5_init = 3000*PL
+P8_init = 450*PL
+P9_init = 250*PL
+P9s_init = 250*PL
+P10_init = 2700*PL
+substrate_init = 1e-6[mol/l]
+VII_init = 1e-8[mol/l]
+VIIa_init = 1e-10[mol/l]
+X_init = 1.6e-7[mol/l]
+IX_init = 9e-8[mol/l]
+II_init = 1.4e-6[mol/l]
+VIII_init = 0.7e-9[mol/l]
+V_init = 2e-8[mol/l]
+TFPI_init = 2.5e-9[mol/l]
+ATIII_init = 3.4e-6[mol/l]
+TF_init = 50e-9[mol/m^2]
+Pcinit = 6.5e-5[mol/m^3]
+APcinit = 0[mol/l]
+TM_init = 1e-9[mol/m^2]
+
+
+#Rate Constants
+TFVII_on = 3.2e6[l/(mol*s)]
+TFVII_off = 3.1e-3[1/s]
+TFVIIa_on = 2.3e7[l/(mol*s)]
+TFVIIa_off = 3.1e-3[1/s]
+TFVIIaVII_cat = 4.4e5[l/(mol*s)]
+XaVII_cat = 1.3e7[l/(mol*s)]
+IIaVII_cat = 2.3e4[l/(mol*s)]
+TFVIIaX_on = 2.5e7[l/(mol*s)]
+TFVIIaX_off = 1.05[1/s]
+TFVIIaX_cat = 6[1/s]
+TFVIIaXa_on = 2.2e7[l/(mol*s)]
+TFVIIaXa_off = 19[1/s]
+TFVIIaIX_on = 1e7[l/(mol*s)]
+TFVIIaIX_off = 2.4[1/s]
+TFVIIaIX_cat = 1.8[1/s]
+XaII_cat = 7.5e3[l/(mol*s)]
+IIaVIII_cat = 2e7[l/(mol*s)]
+IXaVIIIa_on = 1e7[l/(mol*s)]
+IXaVIIIa_off = 5e-3[1/s]
+IXaVIIIaX_on = 1e8[l/(mol*s)]
+IXaVIIIaX_off = 1e-3[1/s]
+IXaVIIIaX_cat = 8.2[1/s]
+VIIIa_dec_on = 6e-3[1/s]
+VIIIa_dec_off = 2.2e4[l/(mol*s)]
+IXaVIIIaX_dec = 1e-3[1/s]
+IXaVIIIa_dec = 1e-3[1/s]
+IIaV_cat = 2e7[l/(mol*s)]
+XaVa_on = 4e8[l/(mol*s)]
+XaVa_off = 0.2[1/s]
+XaVaII_on = 1e8[l/(mol*s)]
+XaVaII_off = 103[1/s]
+XaVaII_cat = 63.5[1/s]
+XaVamIIa_cat = 1.5e7[l/(mol*s)]
+XaTFPI_on = 9e5[l/(mol*s)]
+XaTFPI_off = 3.6e-4[1/s]
+TFVIIaXa_TFPI_on = 3.2e8[l/(mol*s)]
+TFVIIaXa_TFPI_off = 1.1e-4[1/s]
+TFVIIa_XaTFPI_cat = 5e7[l/(mol*s)]
+XaATIII_cat = 1.5e3[l/(mol*s)]
+mIIaATIII_cat = 7.1e3[l/(mol*s)]
+IXaATIII_cat = 490[l/(mol*s)]
+IIaATIII_cat = 7100[l/(mol*s)]
+TFVIIaATIII_cat = 230[l/(mol*s)]
+IXP9_on = 1e7[l/(mol*s)]
+IXP9_off = 2.5e-2[1/s]
+IXaP9_on = 1e7[l/(mol*s)]*amplifier_on
+IXaP9_off = 2.5e-2[1/s]*amplifier_off
+IXaP9s_on = 1e7[l/(mol*s)]*amplifier_on
+IXaP9s_off = 2.5e-2[1/s]*amplifier_off
+XP10_on = 1e7[l/(mol*s)]
+XP10_off = 2.5e-2[1/s]
+XaP10_on = 1e7[l/(mol*s)]*amplifier_on
+XaP10_off = 2.5e-2[1/s]
+VP5_on = 5.7e7[l/(mol*s)]
+VP5_off = 0.17[1/s]
+VaP5_on = 5.7[l/(mol*s)]*amplifier_on
+VaP5_off = 0.17[1/s]*amplifier_off
+VIIIP8_on = 5e7[l/(mol*s)]
+VIIIP8_off = 0.17[1/s]
+VIIIaP8_on = 5e7[l/(mol*s)]*amplifier_on
+VIIIaP8_off = 0.17[1/s]*amplifier_off
+IIP2_on = 1e7[l/(mol*s)]
+IIP2_off = 5.9[1/s]
+IIaP2_on = 1e7[l/(mol*s)]
+IIaP2_off = 5.9[1/s]
+VP5XaP10_on = 1e8[l/(mol*s)]/modifier
+VP5XaP10_off = 1[1/s]
+VP5XaP10_cat = 4.6e-2[1/s]
+IIaP2VP5_cat = IIaV_cat/modifier
+VIIIP8XaP10_on = 5.1e7[l/(mol*s)]/modifier
+VIIIP8XaP10_off = 1[1/s]
+VIIIP8XaP10_cat = 2.3e-2[1/s]
+IIaP2VIIIP8_cat = IIaVIII_cat/modifier
+IXaP9VIIIaP8XP10_on = IXaVIIIaX_on/modifier
+IXaP9VIIIaP8XP10_off = IXaVIIIaX_off
+IXaP9VIIIaP8XP10_cat = IXaVIIIaX_cat
+IXaP9sVIIIaP8XP10_on = IXaVIIIaX_on/modifier
+IXaP9sVIIIaP8XP10_off = IXaVIIIaX_off
+IXaP9sVIIIaP8XP10_cat = IXaVIIIaX_cat
+XaP10VaP5IIP2_on = XaVaII_on/modifier
+XaP10VaP5IIP2_off = XaVaII_off
+XaP10VaP5IIP2_cat = XaVaII_cat
+XaP10VaP5mIIaP2_cat = XaVamIIa_cat/modifier
+IXaP9VIIIaP8_on = IXaVIIIa_on/modifier
+IXaP9VIIIaP8_off = IXaVIIIa_off
+IXaP9sVIIIaP8_on = IXaVIIIa_on/modifier
+IXaP9sVIIIaP8_off = IXaVIIIa_off
+XaP10VaP5_on = XaVa_on/modifier
+XaP10VaP5_off = XaVa_off
+mIIaP2_on = IIaP2_on
+mIIaP2_off = IIaP2_off
+VIIIaP8_dec_on = VIIIa_dec_on
+VIIIaP8_dec_off = VIIIa_dec_off
+IXaP9VIIIaP8XP10_dec = IXaVIIIaX_dec
+IXaP9VIIIaP8_dec = IXaVIIIa_dec
+VIIIa1LP8_on = VIIIaP8_on
+VIIIa1LP8_off = VIIIaP8_off
+IXaP9sVIIIaP8XP10_dec = IXaVIIIaX_dec
+IXaP9sVIIIaP8_dec = IXaVIIIa_dec
+substrateIIa_cat = 1[m^3/(mol*s)]
+h43 = 0.33[1/s]
+h44 = 1e8[l/(mol*s)]
+h45 = 100[1/s]
+h46 = 1e8[l/(mol*s)]
+h47 = 0.41[1/s]
+h48 = 7.1e3[l/(mol*s)]
+h49 = 0.7[1/s]
+h50 = 1e8[l/(mol*s)]
+h51 = 1[1/s]
+h52 = 0.192[1/s]
+h53 = 0.028[1/s]
+h54 = 0.15[1/s]
+h55 = 10.3[1/s]
+h56 = 10.3[1/s]
+h57 = 4.6e7[l/(mol*s)]/modifier
+h58 = 4.6e7[l/(mol*s)]/modifier
+h59 = 0.0035[1/s]
+h60 = 5.7e3[l/(mol*s)]
+h61 = 3e6[l/(mol*s)]
+h62 = 70[1/s]
+h63 = 1e8[l/(mol*s)]/modifier
+h64 =4.05e6[l/(mol*s)]
+
+#Bulk Reactions
+
+1. rb1 = XaVII_cat*cVII*cXa
+2. rb2 = IIaVII_cat*cVII*cIIa
+3. rb3 = XaII_cat*cXa*cII
+4. rb4 = IIaVIII_cat*cIIa*cVIII
+5. rb5 = VIIIa_dec_on*cVIIIa-VIIIa_dec_off*cVIIIa1L*cVIIIa2
+6. rb6 = IIaV_cat*cIIa*cV
+7. rb7 = XaTFPI_on*cXa*cTFPI-XaTFPI_off*cXaTFPI
+8. rb8 = XaATIII_cat*cXa*cATIII
+9. rb9 = mIIaATIII_cat*cmIIa*cATIII
+10. rb10 = IXaATIII_cat*cIXa*cATIII
+11. rb11 = IIaATIII_cat*cIIa*cATIII
+12. rb12 = substrateIIa_cat*cIIa*csubstrate
+13. rb13 = h60*cX*cIXa
+14. rb14 = h61*cV*cmIIa
+15. rb15 = h50*cVa*cAPC-h49*cAPCVa
+16. rb16 = h51*cAPCVa
+17. rb17 = h52*cAPCVa
+18. rb18 = h50*cAPC*cVa5-h49*cAPCVa5
+19. rb19 = h50*cAPC*cVa3-h49*cAPCVa3
+20. rb20 = h51*cAPCVa5
+21. rb21 = h51*cAPCVa3
+22. rb22 = h53*cVa3
+23. rb23 = h53*cVa53
+24. rb24 = h50*cAPC*cLCA1-h49*cAPCLCA1
+
+#Surface Reactions
+
+1. r1 = TFVII_on*cTF*cVII-TFVII_off*cTFVII
+2. r2 = TFVIIa_on*cTF*cVIIa-TFVIIa_off*cTFVIIa
+3. r3 = TFVIIaVII_cat*cVII*cTFVIIa
+4. r6 = TFVIIaX_on*cTFVIIa*cX-TFVIIaX_off*cTFVIIaX
+5. r7 = TFVIIaX_cat*cTFVIIaX
+6. r8 = TFVIIaXa_on*cTFVIIa*cXa-TFVIIaXa_off*cTFVIIaXa
+7. r9 = TFVIIaIX_on*cTFVIIa*cIX-TFVIIaIX_off*cTFVIIaIX
+8. r10 = TFVIIaIX_cat*cTFVIIaIX
+9. r25 = TFVIIaXa_TFPI_on*cTFVIIaXa*cTFPI-TFVIIaXa_TFPI_off*cTFVIIaXaTFPI
+10. r26 = TFVIIa_XaTFPI_cat*cTFVIIa*cXaTFPI
+11. r31 = TFVIIaATIII_cat*cTFVIIa*cATIII
+12. r32 = IXP9_on*cIX*cP9-IXP9_off*cIXP9
+13. r33 = IXaP9_on*cIXa*cP9-IXaP9_off*cIXaP9
+14. r34 = IXaP9s_on*cIXa*cP9s-IXaP9s_off*cIXaP9s
+15. r35 = XP10_on*cX*cP10-XP10_off*cXP10
+16. r36 = XaP10_on*cXa*cP10-XaP10_off*cXaP10
+17. r37 = VP5_on*cV*cP5-VP5_off*cVP5
+18. r38 = VaP5_on*cVa*cP5-VaP5_off*cVaP5
+19. r39 = VIIIP8_on*cVIII*cP8-VIIIP8_off*cVIIIP8
+20. r40 = VIIIaP8_on*cVIIIa*cP8-VIIIaP8_off*cVIIIaP8
+21. r41 = IIP2_on*cII*cP2-IIP2_off*cIIP2
+22. r42 = IIaP2_on*cIIa*cP2-IIaP2_off*cIIaP2
+23. r43 = VP5XaP10_on*cXaP10*cVP5-VP5XaP10_off*cVP5XaP10
+24. r44 = VP5XaP10_cat*cVP5XaP10
+25. r45 = IIaP2VP5_cat*cVP5*cIIaP2
+26. r46 = VIIIP8XaP10_on*cXaP10*cVIIIP8-VIIIP8XaP10_off*cVIIIP8XaP10
+27. r47 = VIIIP8XaP10_cat*cVIIIP8XaP10
+28. r48 = IIaP2VIIIP8_cat*cVIIIP8*cIIaP2
+29. r49 = IXaP9VIIIaP8XP10_on*cXP10*cIXaP9VIIIaP8-IXaP9VIIIaP8XP10_off*cIXaP9VIIIaP8XP10
+30. r50 = IXaP9VIIIaP8XP10_cat*cIXaP9VIIIaP8XP10
+31. r51 = IXaP9sVIIIaP8XP10_on*cXP10*cIXaP9sVIIIaP8-IXaP9sVIIIaP8XP10_off*cIXaP9sVIIIaP8XP10
+32. r52 = IXaP9sVIIIaP8XP10_cat*cIXaP9sVIIIaP8XP10
+33. r53 = XaP10VaP5IIP2_on*cIIP2*cXaP10VaP5-XaP10VaP5IIP2_off*cXaP10VaP5IIP2
+34. r54 = XaP10VaP5IIP2_cat*cXaP10VaP5IIP2
+35. r55 = IXaP9VIIIaP8_on*cIXaP9*cVIIIaP8-IXaP9VIIIaP8_off*cIXaP9VIIIaP8
+36. r56 = IXaP9sVIIIaP8_on*cIXaP9s*cVIIIaP8-IXaP9sVIIIaP8_off*cIXaP9sVIIIaP8
+37. r57 = XaP10VaP5_on*cXaP10*cVaP5-XaP10VaP5_off*cXaP10VaP5
+38. r58 = XaP10VaP5mIIaP2_cat*cXaP10VaP5*cmIIaP2
+39. r59 = VIIIaP8_dec_on*cVIIIaP8-VIIIaP8_dec_off*cVIIIa2*cVIIIa1LP8
+40. r60 = IXaP9VIIIaP8XP10_dec*cIXaP9VIIIaP8XP10
+41. r61 = IXaP9sVIIIaP8XP10_dec*cIXaP9sVIIIaP8XP10
+42. r62 = IXaP9VIIIaP8_dec*cIXaP9VIIIaP8
+43. r63 = IXaP9sVIIIaP8_dec*cIXaP9sVIIIaP8
+44. r64 = VIIIa1LP8_off*cVIIIa1LP8
+45. r65 = mIIaP2_on*cmIIa*cP2-mIIaP2_off*cmIIaP2
+46. r66 = IXaVIIIaX_on*cX*cIXaP9VIIIaP8-IXaVIIIaX_off*cIXaP9VIIIaP8X X+IXaP9VIIIaP8=IXaP9VIIIaP8X
+47. r67 = IXaVIIIaX_cat*cIXaP9VIIIaP8X IXaP9VIIIaP8X=Xa+IXaP9VIIIaP8
+48. r68 = IXaVIIIaX_on*cX*cIXaP9sVIIIaP8-IXaVIIIaX_off*cIXaP9sVIIIaP8X X+IXaP9sVIIIaP8=IXaP9sVIIIaP8X
+49. r69 = IXaVIIIaX_cat*cIXaP9sVIIIaP8X IXaP9sVIIIaP8X=Xa+IXaP9sVIIIaP8
+50. r70 = XaVaII_on*cII*cXaP10VaP5-XaVaII_off*cXaP10VaP5II II+XaP10VaP5=XaP10VaP5II
+51. r71 = XaVaII_cat*cXaP10VaP5II XaP10VaP5II=mIIa+XaP10VaP5
+52. r72 = XaVamIIa_cat*cXaP10VaP5*cmIIa XaP10VaP5+mIIa=XaP10VaP5+IIa
+53. r73 = XaVII_cat*cVII*cXaP10 XaP10+VII=>XaP10+VIIa
+54. r74 = IIaVII_cat*cVII*cIIaP2 IIaP2+VII=>IIaP2+VIIa
+55. r75 = XaVII_cat*cII*cXaP10 XaP10+II=>XaP10+IIa
+56. r76 = XaVII_cat*cXaP10*cIIP2/modifier XaP10+IIP2=>XaP10+IIaP2
+57. r77 = XaVII_cat*cXa*cIIP2 Xa+IIP2=>Xa+IIaP2
+58. r78 = IIaVIII_cat*cIIa*cVIIIP8 IIa+VIIIP8=>IIa+VIIIaP8
+59. r79 = IIaVIII_cat*cVIII*cIIaP2 IIaP2+VIII=>IIaP2+VIIIa
+60. r80 = IIaV_cat*cIIa*cVP5 IIa+VP5=>IIa+VaP5
+61. r81 = IIaV_cat*cV*cIIaP2 IIaP2+V=>IIaP2+Va
+62. r82 = substrateIIa_cat*csubstrate*cIIaP2
+63. rx84 = VaP5_on*cP5*cVa3-VaP5_off*cVa3P5
+64. rx85 = VaP5_on*cP5*cVa5-VaP5_off*cVa5P5
+65. rx100 = VaP5_on*cP5*cVa53-VaP5_off*cVa53P5
+66. rx86 = XaP10VaP5_on*cXaP10*cVa3P5-h54*cXaP10Va3P5
+67. rx87 = XaP10VaP5_on*cXaP10*cVa5P5-h54*cXaP10Va5P5
+68. rx88 = XaP10VaP5IIP2_on*cIIP2*cXaP10Va5P5-XaP10VaP5IIP2_off*cXaP10Va5P5IIP2
+69. rx89 = h55*cXaP10Va5P5IIP2
+70. rx90 = XaP10VaP5IIP2_on*cIIP2*cXaP10Va3P5-XaP10VaP5IIP2_off*cXaP10Va3P5IIP2
+71. rx91 = h56*cXaP10Va3P5IIP2
+72. rx92 = h57*cmIIaP2*cXaP10Va5P5
+73. rx93 = h58*cmIIaP2*cXaP10Va3P5
+74. rx94 = h59*cXaP10Va3P5
+75. rx95 = h59*cXaP10Va3P5IIP2
+76. rx101 = XaP10VaP5_on*cXaP10*cVa53P5-h54*cXaP10Va53P5
+77. rx102 = XaP10VaP5IIP2_on*cIIP2*cXaP10Va53P5-XaP10VaP5IIP2_off*cXaP10Va53P5IIP2
+78. rx103 = h56*cXaP10Va53P5IIP2
+79. rx104 = h58*cmIIaP2*cXaP10Va53P5
+80. rx105 = h59*cXaP10Va53P5
+81. rx106 = h59*cXaP10Va53P5IIP2
+82. rx107 = h63*cVaP5*cIIP2-h62*cIIP2VaP5
+83. rx108 = h64*cAPC*cXaP10Va5P5
+84. rx79 = h44*cIIa*cTM-h43*cTMIIa
+85. rx80 = h46*cPC*cTMIIa-h45*cTMIIaPC
+86. rx81 = h47*cTMIIaPC
+87. rx82 = h48*cATIII*cTMIIa
+88. rx83 = h46*cAPC*cTMIIa-h45*cTMIIaAPC
+89. rx96 = h44*cmIIa*cTM-h43*cTMmIIa
+90. rx97 = h46*cPC*cTMmIIa-h45*cTMmIIaPC
+91. rx98 = h47*cTMmIIaPC
+92. rx99 = h48*cATIII*cTMmIIa
+
+
+

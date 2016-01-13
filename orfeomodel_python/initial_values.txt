@@ -1,0 +1,24 @@
+NA = 6.022e23
+PL = (1/(40e-14*NA))[mol/m^2]
+
+#initial values
+P2_init = 2000*PL
+P5_init = 3000*PL
+P8_init = 450*PL
+P9_init = 250*PL
+P9s_init = 250*PL
+P10_init = 2700*PL
+substrate_init = 1e-6[mol/l]
+VII_init = 1e-8[mol/l]
+VIIa_init = 1e-10[mol/l]
+X_init = 1.6e-7[mol/l]
+IX_init = 9e-8[mol/l]
+II_init = 1.4e-6[mol/l]
+VIII_init = 0.7e-9[mol/l]
+V_init = 2e-8[mol/l]
+TFPI_init = 2.5e-9[mol/l]
+ATIII_init = 3.4e-6[mol/l]
+TF_init = 50e-9[mol/m^2]
+PC_init = 6.5e-8[mol/l]
+APC_init = 0[mol/l]
+TM_init = 1e-9[mol/m^2]

@@ -1,0 +1,12 @@
+#download and install petsc
+
+./configure PETSC_ARCH=arch-linux2-c-opt --download-superlu_dist --download-parmetis --download-metis --with-debugging=no
+
+# DO NOT USE THIS ONE./configure PETSC_ARCH=arch-linux2-c-opt --with-cc=mpicc --with-fc=mpif90 --download-f-blas-lapack --download-mpich --download-superlu_dist --download-parmetis --download-metis --with-debugging=no
+
+make all test
+
+#add $PETSC_DIR and $PETSC_ARCH into ~/.bash_profile or ~/.bashrc
+
+#make coagulation solver
+make coagulationo3
