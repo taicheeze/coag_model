@@ -403,7 +403,7 @@ PetscErrorCode SurfaceReactionRateCalculation(PetscReal t,PetscReal x_ptr[NUMBER
     r_constant[52] = 8.2000e+00;
     r_constant[53] = 1.0000e+10;
     r_constant[54] = 1.0300e+02;
-    r_constant[55] = 3.1750e+01;//lowered by factor of 2
+    r_constant[55] = 6.3500e+01;
     r_constant[56] = 1.0000e+09;
     r_constant[57] = 5.0000e-03;
     r_constant[58] = 1.0000e+09;
@@ -428,7 +428,7 @@ PetscErrorCode SurfaceReactionRateCalculation(PetscReal t,PetscReal x_ptr[NUMBER
     r_constant[77] = 8.2000e+00;
     r_constant[78] = 1.0000e+05;
     r_constant[79] = 1.0300e+02;
-    r_constant[80] = 3.1750e+01;//lowered by factor of 2
+    r_constant[80] = 6.3500e+01;
     r_constant[81] = 2.3000e+05;
     r_constant[82] = 1.3000e+04;
     r_constant[83] = 2.3000e+01;
@@ -511,7 +511,7 @@ PetscErrorCode SurfaceReactionRateCalculation(PetscReal t,PetscReal x_ptr[NUMBER
     r_constant[160] = 0.0000e-00; //was 2.3155e-03
     r_constant[161] = 2.0376e+03;
     r_constant[162] = 4.0000e+04; //changed from 4e4
-    r_constant[163] = 1.8000e-02; //should be 9e-2
+    r_constant[163] = 9.0000e-02; //should be 9e-2
     r_constant[164] = 7.7000e-05;
     r_constant[165] = 4.1000e-04;
     r_constant[166] = 3.0000e-04;
@@ -519,11 +519,11 @@ PetscErrorCode SurfaceReactionRateCalculation(PetscReal t,PetscReal x_ptr[NUMBER
     r_constant[168] = 2.3155e-09; //approx with ATF 2.3155e-03 production of tpa induced by fibrin
     r_constant[169] = 1.0000e+00; //release of tpa to plasma
     r_constant[170] = 1.0000e+00; //production of tpa induced by fibrin
-    r_constant[171] = 1.6000e-02; //increased from 1.6e-2
+    r_constant[171] = 1.6000e-02; //fibrin induced tpa_pai unbinding rate such that tpa=tpa_pai with high fibrin
     r_constant[172] = 1.0000e+00; //unbinding of tpa pai
     r_constant[173] = 1.0000e-01; //degradation of tpa
     r_constant[174] = 1.0000e+00; //degradation of tpa
-    r_constant[175] = 1.0000e-03;
+    r_constant[175] = 1.0000e-03; //michaelis constant of tpa_pai unbinding
 
     reaction_rate[0] = r_constant[0] * x_ptr[0] * cv_ptr[0];
     reaction_rate[1] = r_constant[1] * x_ptr[1];
@@ -771,7 +771,7 @@ PetscErrorCode SurfaceReactionJacobianCalculation(PetscReal t,PetscReal x_ptr[NU
     r_constant[52] = 8.2000e+00;
     r_constant[53] = 1.0000e+10;
     r_constant[54] = 1.0300e+02;
-    r_constant[55] = 3.1750e+01;//lowered by factor of 2
+    r_constant[55] = 6.3500e+01;
     r_constant[56] = 1.0000e+09;
     r_constant[57] = 5.0000e-03;
     r_constant[58] = 1.0000e+09;
@@ -796,7 +796,7 @@ PetscErrorCode SurfaceReactionJacobianCalculation(PetscReal t,PetscReal x_ptr[NU
     r_constant[77] = 8.2000e+00;
     r_constant[78] = 1.0000e+05;
     r_constant[79] = 1.0300e+02;
-    r_constant[80] = 3.1750e+01;//lowered by factor of 2
+    r_constant[80] = 6.3500e+01;
     r_constant[81] = 2.3000e+05;
     r_constant[82] = 1.3000e+04;
     r_constant[83] = 2.3000e+01;
@@ -879,7 +879,7 @@ PetscErrorCode SurfaceReactionJacobianCalculation(PetscReal t,PetscReal x_ptr[NU
     r_constant[160] = 0.0000e-00; //was 2.3155e-03
     r_constant[161] = 2.0376e+03;
     r_constant[162] = 4.0000e+04; //changed from 4e4
-    r_constant[163] = 1.8000e-02; //should be 9e-2
+    r_constant[163] = 9.0000e-02; //should be 9e-2
     r_constant[164] = 7.7000e-05;
     r_constant[165] = 4.1000e-04;
     r_constant[166] = 3.0000e-04;
@@ -887,11 +887,12 @@ PetscErrorCode SurfaceReactionJacobianCalculation(PetscReal t,PetscReal x_ptr[NU
     r_constant[168] = 2.3155e-09; //approx with ATF 2.3155e-03 production of tpa induced by fibrin
     r_constant[169] = 1.0000e+00; //release of tpa to plasma
     r_constant[170] = 1.0000e+00; //production of tpa induced by fibrin
-    r_constant[171] = 1.6000e-02; //increased from 1.6e-2
+    r_constant[171] = 1.6000e-02; //fibrin induced tpa_pai unbinding rate such that tpa=tpa_pai with high fibrin
     r_constant[172] = 1.0000e+00; //unbinding of tpa pai
     r_constant[173] = 1.0000e-01; //degradation of tpa
     r_constant[174] = 1.0000e+00; //degradation of tpa
-    r_constant[175] = 1.0000e-03;
+    r_constant[175] = 1.0000e-03; //michaelis constant of tpa_pai unbinding
+
 
     J[0][0] =  -1*r_constant[0]*cv_ptr[0] -1*r_constant[2]*cv_ptr[1] -1*r_constant[161]*cv_ptr[44];
     J[0][1] =  +1*r_constant[1];
