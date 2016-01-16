@@ -126,12 +126,12 @@ PetscInt  volume_stoichiometry[NUMBER_OF_SPECIES_IN_VOLUME][NUMBER_OF_REACTIONS_
             { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,-1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
             { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
             { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,-1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-            { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1,-1, 1, 0,-1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+            { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1,-1, 1, 0,-2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
             { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1,-1,-1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
             { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1,-1,-1, 0, 0, 0, 0, 0, 0, 0, 0,-1, 0, 0, 0, 0, 0, 0, 0, 0},
             { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0,-1, 1, 0, 0, 0, 0,-1, 0, 0, 0, 0, 0},
             { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-            { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+            { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
             { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1,-1,-1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
             { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1,-1,-1, 0, 0,-1, 0, 0, 0, 0, 0, 0, 0, 0, 0},
             { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0,-1, 0, 0, 0, 0},
@@ -222,14 +222,20 @@ PetscErrorCode VolumeReactionRateCalculation(PetscReal t,PetscReal x_ptr[NUMBER_
     r_constant[52] = 1.0000e+03;
     r_constant[53] = 1.6000e+01;
     r_constant[54] = 1.6000e+01;
-    r_constant[55] = 1.0000e+01;
-    r_constant[56] = 3.0000e+03;
-    r_constant[57] = 6.9690e+03;
-    r_constant[58] = 8.0080e+03;
-    r_constant[59] = 4.0000e+04;
-    r_constant[60] = 1.0000e+02;
-    r_constant[61] = 9.0000e-02;
-    r_constant[62] = 4.4000e+01;
+    r_constant[55] = 1.0000e+01; 
+    r_constant[56] = 3.0000e+03; //AP to Pn binding
+    r_constant[57] = 4.7000e-01; //fibrin degradation to FDP formation, increased from 4.7e-1
+    r_constant[58] = 2.1000e-03; //fibrin degradation to FDP formation
+    r_constant[59] = 4.0000e+04; //pai stpa binding
+    r_constant[60] = 1.6000e-02; //increased from 1.6e-2, stpa_pai unbinding
+    r_constant[61] = 1.0000e+00; //pai stpa binding
+    r_constant[62] = 1.0000e+00; //stpa_pai unbinding
+    r_constant[63] = 7.7000e-05; //Pg to pn conversion
+    r_constant[64] = 4.1000e-04; //Pg to pn conversion
+    r_constant[65] = 3.0000e-04; //Pg to pn conversion
+    r_constant[66] = 9.0000e-02; //should be 9e-2
+    r_constant[67] = 1.0000e-03; //stpa_pai unbinding
+    r_constant[68] = 2.8900e-03; //stpa hepatic clearance
 
     reaction_rate[0] = r_constant[0] * x_ptr[0] * x_ptr[2];
     reaction_rate[1] = r_constant[1] * x_ptr[0] * x_ptr[3];
@@ -277,7 +283,7 @@ PetscErrorCode VolumeReactionRateCalculation(PetscReal t,PetscReal x_ptr[NUMBER_
     reaction_rate[43] = r_constant[43] * x_ptr[3] * x_ptr[46];
     reaction_rate[44] = r_constant[44] * x_ptr[48];
     reaction_rate[45] = r_constant[45] * x_ptr[48];
-    reaction_rate[46] = r_constant[46] * x_ptr[46];
+    reaction_rate[46] = r_constant[46] * x_ptr[46] * x_ptr[46];
     reaction_rate[47] = r_constant[47] * x_ptr[52];
     reaction_rate[48] = r_constant[48] * x_ptr[3] * x_ptr[52];
     reaction_rate[49] = r_constant[49] * x_ptr[53];
@@ -288,12 +294,12 @@ PetscErrorCode VolumeReactionRateCalculation(PetscReal t,PetscReal x_ptr[NUMBER_
     reaction_rate[54] = r_constant[54] * x_ptr[17] * x_ptr[48];
     reaction_rate[55] = r_constant[55] * x_ptr[17] * x_ptr[55];
     reaction_rate[56] = r_constant[56] * x_ptr[60] * x_ptr[61];
-    reaction_rate[57] = r_constant[57] * x_ptr[49];
-    reaction_rate[58] = r_constant[58] * x_ptr[54];
-    reaction_rate[59] = r_constant[59] * x_ptr[63] * x_ptr[65];
-    reaction_rate[60] = r_constant[60] * x_ptr[66];
-    reaction_rate[61] = r_constant[61] * x_ptr[59];
-    reaction_rate[62] = r_constant[62] * x_ptr[65];
+    reaction_rate[57] = r_constant[57] * x_ptr[60] * x_ptr[49] / (r_constant[58] + x_ptr[49]);
+    reaction_rate[58] = r_constant[57] * x_ptr[60] * x_ptr[54] / (r_constant[58] + x_ptr[54]);
+    reaction_rate[59] = r_constant[61]*r_constant[59] * x_ptr[63] * x_ptr[65];
+    reaction_rate[60] = r_constant[62]*r_constant[60] * x_ptr[66]* (x_ptr[49]+2*x_ptr[54])/(r_constant[67] + (x_ptr[49]+2*x_ptr[54]));
+    reaction_rate[61] = r_constant[66] *x_ptr[65]* x_ptr[59]*(x_ptr[49]+2*x_ptr[54])/ (r_constant[64]*(x_ptr[49]+2*x_ptr[54])+r_constant[64]*r_constant[65]+(x_ptr[49]+2*x_ptr[54])*x_ptr[59]+r_constant[63]*x_ptr[59]);
+    reaction_rate[62] = r_constant[68] * x_ptr[65];
 
 /*
  * End of user-generated volume reaction rates
@@ -371,14 +377,20 @@ PetscErrorCode VolumeReactionJacobianCalculation(PetscReal t,PetscReal x_ptr[NUM
     r_constant[52] = 1.0000e+03;
     r_constant[53] = 1.6000e+01;
     r_constant[54] = 1.6000e+01;
-    r_constant[55] = 1.0000e+01;
-    r_constant[56] = 3.0000e+03;
-    r_constant[57] = 6.9690e+03;
-    r_constant[58] = 8.0080e+03;
-    r_constant[59] = 4.0000e+04;
-    r_constant[60] = 1.0000e+02;
-    r_constant[61] = 9.0000e-02;
-    r_constant[62] = 4.4000e+01;
+    r_constant[55] = 1.0000e+01; 
+    r_constant[56] = 3.0000e+03; //AP to Pn binding
+    r_constant[57] = 4.7000e-01; //fibrin degradation to FDP formation, increased from 4.7e-1
+    r_constant[58] = 2.1000e-03; //fibrin degradation to FDP formation
+    r_constant[59] = 4.0000e+04; //pai stpa binding
+    r_constant[60] = 1.6000e-02; //increased from 1.6e-2, stpa_pai unbinding
+    r_constant[61] = 1.0000e+00; //pai stpa binding
+    r_constant[62] = 1.0000e+00; //stpa_pai unbinding
+    r_constant[63] = 7.7000e-05; //Pg to pn conversion
+    r_constant[64] = 4.1000e-04; //Pg to pn conversion
+    r_constant[65] = 3.0000e-04; //Pg to pn conversion
+    r_constant[66] = 9.0000e-02; //should be 9e-2
+    r_constant[67] = 1.0000e-03; //stpa_pai unbinding
+    r_constant[68] = 2.8900e-03; //stpa hepatic clearance
 
     J[0][0] =  -1*r_constant[0]*x_ptr[2] -1*r_constant[1]*x_ptr[3];
     J[0][2] =  -1*r_constant[0]*x_ptr[0];
@@ -523,7 +535,7 @@ PetscErrorCode VolumeReactionJacobianCalculation(PetscReal t,PetscReal x_ptr[NUM
     J[45][45] =  -1*r_constant[40]*x_ptr[3];
     J[45][47] =  +1*r_constant[41];
     J[46][3] =  -1*r_constant[43]*x_ptr[46];
-    J[46][46] =  -1*r_constant[43]*x_ptr[3] -1*r_constant[46];
+    J[46][46] =  -1*r_constant[43]*x_ptr[3] -2*r_constant[46] * x_ptr[46];
     J[46][47] =  +1*r_constant[42];
     J[46][48] =  +1*r_constant[44];
     J[46][52] =  +1*r_constant[47];
@@ -536,13 +548,14 @@ PetscErrorCode VolumeReactionJacobianCalculation(PetscReal t,PetscReal x_ptr[NUM
     J[48][48] =  -1*r_constant[44] -1*r_constant[45] -1*r_constant[54]*x_ptr[17];
     J[49][3] =  -1*r_constant[51]*x_ptr[49];
     J[49][48] =  +1*r_constant[45];
-    J[49][49] =  -1*r_constant[51]*x_ptr[3] -1*r_constant[57];
+    J[49][49] =  -1*r_constant[57]*r_constant[58]*x_ptr[60] / ((r_constant[58] + x_ptr[49]) * (r_constant[58] + x_ptr[49]))-1*r_constant[51] * x_ptr[3];
     J[49][55] =  +1*r_constant[52];
+    J[49][60] =  -1*r_constant[57]*x_ptr[49]/ (r_constant[58] + x_ptr[49]);
     J[50][47] =  +1*r_constant[42];
     J[51][48] =  +1*r_constant[45];
     J[51][53] =  +1*r_constant[50];
     J[52][3] =  -1*r_constant[48]*x_ptr[52];
-    J[52][46] =  +1*r_constant[46];
+    J[52][46] =  +2*r_constant[46] * x_ptr[46];
     J[52][52] =  -1*r_constant[47] -1*r_constant[48]*x_ptr[3];
     J[52][53] =  +1*r_constant[49];
     J[53][3] =  +1*r_constant[48]*x_ptr[52];
@@ -550,7 +563,8 @@ PetscErrorCode VolumeReactionJacobianCalculation(PetscReal t,PetscReal x_ptr[NUM
     J[53][52] =  +1*r_constant[48]*x_ptr[3];
     J[53][53] =  -1*r_constant[49] -1*r_constant[50] -1*r_constant[53]*x_ptr[17];
     J[54][53] =  +1*r_constant[50];
-    J[54][54] =  -1*r_constant[58];
+    J[54][54] =  -1*r_constant[57]*r_constant[58]*x_ptr[60] / ((r_constant[58] + x_ptr[54]) * (r_constant[58] + x_ptr[54]));
+    J[54][60] =  -1*r_constant[57]*x_ptr[54]/ (r_constant[58] + x_ptr[54]);
     J[55][3] =  +1*r_constant[51]*x_ptr[49];
     J[55][17] =  -1*r_constant[55]*x_ptr[55];
     J[55][49] =  +1*r_constant[51]*x_ptr[3];
@@ -561,25 +575,38 @@ PetscErrorCode VolumeReactionJacobianCalculation(PetscReal t,PetscReal x_ptr[NUM
     J[57][48] =  +1*r_constant[54]*x_ptr[17];
     J[58][17] =  +1*r_constant[55]*x_ptr[55];
     J[58][55] =  +1*r_constant[55]*x_ptr[17];
-    J[59][59] =  -1*r_constant[61];
-    J[60][59] =  +1*r_constant[61];
+    J[59][49] =  -1*r_constant[66]*x_ptr[65]*x_ptr[59]*(r_constant[63]*x_ptr[59]+r_constant[64]*r_constant[65])/(((x_ptr[49]+2*x_ptr[54])*r_constant[64]+r_constant[64]*r_constant[65]+(x_ptr[49]+2*x_ptr[54])*x_ptr[59]+r_constant[63]*x_ptr[59])*((x_ptr[49]+2*x_ptr[54])*r_constant[64]+r_constant[64]*r_constant[65]+(x_ptr[49]+2*x_ptr[54])*x_ptr[59]+r_constant[63]*x_ptr[59]));
+    J[59][54] =  -2*r_constant[66]*x_ptr[65]*x_ptr[59]*(r_constant[63]*x_ptr[59]+r_constant[64]*r_constant[65])/(((x_ptr[49]+2*x_ptr[54])*r_constant[64]+r_constant[64]*r_constant[65]+(x_ptr[49]+2*x_ptr[54])*x_ptr[59]+r_constant[63]*x_ptr[59])*((x_ptr[49]+2*x_ptr[54])*r_constant[64]+r_constant[64]*r_constant[65]+(x_ptr[49]+2*x_ptr[54])*x_ptr[59]+r_constant[63]*x_ptr[59]));
+    J[59][59] =  -1*r_constant[66]*x_ptr[65]*(x_ptr[49]+2*x_ptr[54])*r_constant[64]*(r_constant[65]+(x_ptr[49]+2*x_ptr[54]))/(((x_ptr[49]+2*x_ptr[54])*r_constant[64]+r_constant[64]*r_constant[65]+(x_ptr[49]+2*x_ptr[54])*x_ptr[59]+r_constant[63]*x_ptr[59])*((x_ptr[49]+2*x_ptr[54])*r_constant[64]+r_constant[64]*r_constant[65]+(x_ptr[49]+2*x_ptr[54])*x_ptr[59]+r_constant[63]*x_ptr[59]));
+    J[59][65] =  -1*r_constant[66]*x_ptr[59]*(x_ptr[49]+2*x_ptr[54])/(((x_ptr[49]+2*x_ptr[54])+r_constant[63])*(x_ptr[59]+r_constant[64]*((x_ptr[49]+2*x_ptr[54])+r_constant[65]))/((x_ptr[49]+2*x_ptr[54])+r_constant[63]));
+    J[60][49] =  +1*r_constant[66]*x_ptr[65]*x_ptr[59]*(r_constant[63]*x_ptr[59]+r_constant[64]*r_constant[65])/(((x_ptr[49]+2*x_ptr[54])*r_constant[64]+r_constant[64]*r_constant[65]+(x_ptr[49]+2*x_ptr[54])*x_ptr[59]+r_constant[63]*x_ptr[59])*((x_ptr[49]+2*x_ptr[54])*r_constant[64]+r_constant[64]*r_constant[65]+(x_ptr[49]+2*x_ptr[54])*x_ptr[59]+r_constant[63]*x_ptr[59]));
+    J[60][54] =  +2*r_constant[66]*x_ptr[65]*x_ptr[59]*(r_constant[63]*x_ptr[59]+r_constant[64]*r_constant[65])/(((x_ptr[49]+2*x_ptr[54])*r_constant[64]+r_constant[64]*r_constant[65]+(x_ptr[49]+2*x_ptr[54])*x_ptr[59]+r_constant[63]*x_ptr[59])*((x_ptr[49]+2*x_ptr[54])*r_constant[64]+r_constant[64]*r_constant[65]+(x_ptr[49]+2*x_ptr[54])*x_ptr[59]+r_constant[63]*x_ptr[59]));
+    J[60][59] =  +1*r_constant[66]*x_ptr[65]*(x_ptr[49]+2*x_ptr[54])*r_constant[64]*(r_constant[65]+(x_ptr[49]+2*x_ptr[54]))/(((x_ptr[49]+2*x_ptr[54])*r_constant[64]+r_constant[64]*r_constant[65]+(x_ptr[49]+2*x_ptr[54])*x_ptr[59]+r_constant[63]*x_ptr[59])*((x_ptr[49]+2*x_ptr[54])*r_constant[64]+r_constant[64]*r_constant[65]+(x_ptr[49]+2*x_ptr[54])*x_ptr[59]+r_constant[63]*x_ptr[59]));
     J[60][60] =  -1*r_constant[56]*x_ptr[61];
     J[60][61] =  -1*r_constant[56]*x_ptr[60];
+    J[60][65] =  +1*r_constant[66]*x_ptr[59]*(x_ptr[49]+2*x_ptr[54])/(((x_ptr[49]+2*x_ptr[54])+r_constant[63])*(x_ptr[59]+r_constant[64]*((x_ptr[49]+2*x_ptr[54])+r_constant[65]))/((x_ptr[49]+2*x_ptr[54])+r_constant[63]));
     J[61][60] =  -1*r_constant[56]*x_ptr[61];
     J[61][61] =  -1*r_constant[56]*x_ptr[60];
     J[62][60] =  +1*r_constant[56]*x_ptr[61];
     J[62][61] =  +1*r_constant[56]*x_ptr[60];
-    J[63][63] =  -1*r_constant[59]*x_ptr[65];
-    J[63][65] =  -1*r_constant[59]*x_ptr[63];
-    J[63][66] =  +1*r_constant[60];
-    J[64][49] =  +1*r_constant[57];
-    J[64][54] =  +1*r_constant[58];
-    J[65][63] =  -1*r_constant[59]*x_ptr[65];
-    J[65][65] =  -1*r_constant[59]*x_ptr[63] -1*r_constant[62];
-    J[65][66] =  +1*r_constant[60];
-    J[66][63] =  +1*r_constant[59]*x_ptr[65];
-    J[66][65] =  +1*r_constant[59]*x_ptr[63];
-    J[66][66] =  -1*r_constant[60];
+    J[63][49] =  +1*r_constant[62]*r_constant[60]*x_ptr[66]*r_constant[67]/(((x_ptr[49]+2*x_ptr[54])+r_constant[67])*((x_ptr[49]+2*x_ptr[54])+r_constant[67]));
+    J[63][54] =  +2*r_constant[62]*r_constant[60]*x_ptr[66]*r_constant[67]/(((x_ptr[49]+2*x_ptr[54])+r_constant[67])*((x_ptr[49]+2*x_ptr[54])+r_constant[67]));
+    J[63][63] =  -1*r_constant[61]*r_constant[59]*x_ptr[65];
+    J[63][65] =  -1*r_constant[61]*r_constant[59]*x_ptr[63]-1*r_constant[68];
+    J[63][66] =  +1*r_constant[62]*r_constant[60]*(x_ptr[49]+2*x_ptr[54])/(r_constant[67]+(x_ptr[49]+2*x_ptr[54]));
+    J[64][49] =  +1*r_constant[57]*r_constant[58]*x_ptr[60] / ((r_constant[58] + x_ptr[49]) * (r_constant[58] + x_ptr[49]));
+    J[64][54] =  +2*r_constant[57]*r_constant[58]*x_ptr[60] / ((r_constant[58] + x_ptr[54]) * (r_constant[58] + x_ptr[54]));
+    J[64][60] =  +1*r_constant[57]*x_ptr[49]/ (r_constant[58] + x_ptr[49]) +2*r_constant[57]*x_ptr[54]/ (r_constant[58] + x_ptr[54]);
+    J[65][49] =  +1*r_constant[62]*r_constant[60]*x_ptr[66]*r_constant[67]/(((x_ptr[49]+2*x_ptr[54])+r_constant[67])*((x_ptr[49]+2*x_ptr[54])+r_constant[67]));
+    J[65][54] =  +2*r_constant[62]*r_constant[60]*x_ptr[66]*r_constant[67]/(((x_ptr[49]+2*x_ptr[54])+r_constant[67])*((x_ptr[49]+2*x_ptr[54])+r_constant[67]));
+    J[65][63] =  -1*r_constant[61]*r_constant[59]*x_ptr[65];
+    J[65][65] =  -1*r_constant[61]*r_constant[59]*x_ptr[63];
+    J[65][66] =  +1*r_constant[62]*r_constant[60]*(x_ptr[49]+2*x_ptr[54])/(r_constant[67]+(x_ptr[49]+2*x_ptr[54]));
+    J[66][49] =  -1*r_constant[62]*r_constant[60]*x_ptr[66]*r_constant[67]/(((x_ptr[49]+2*x_ptr[54])+r_constant[67])*((x_ptr[49]+2*x_ptr[54])+r_constant[67]));
+    J[66][54] =  -2*r_constant[62]*r_constant[60]*x_ptr[66]*r_constant[67]/(((x_ptr[49]+2*x_ptr[54])+r_constant[67])*((x_ptr[49]+2*x_ptr[54])+r_constant[67]));
+    J[66][63] =  +1*r_constant[61]*r_constant[59]*x_ptr[65];
+    J[66][65] =  +1*r_constant[61]*r_constant[59]*x_ptr[63];
+    J[66][66] =  -1*r_constant[62]*r_constant[60]*(x_ptr[49]+2*x_ptr[54])/(r_constant[67]+(x_ptr[49]+2*x_ptr[54]));
 
 /*
  * End of user-generated jacobian function

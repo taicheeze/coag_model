@@ -35,4 +35,5 @@ PAI_init = 4e-10[mol/l]
 AP_init = 1e-6[mol/l]
 tPA_init = 7e-11[mol/m^2]
 stPA_PAI_init = 7e-8[mol/m^3]
+ECPR_init = 2.7e-9[mol/m^2]
 

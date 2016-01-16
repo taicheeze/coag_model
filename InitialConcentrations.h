@@ -4,7 +4,7 @@
 #include <petscsys.h>
 
 #define NUMBER_OF_SPECIES_IN_VOLUME     67
-#define NUMBER_OF_SPECIES_ON_SURFACE    67
+#define NUMBER_OF_SPECIES_ON_SURFACE    69
 
 const char VOLUME_SPECIES_NAMES[NUMBER_OF_SPECIES_IN_VOLUME][256]
         = {"VII"                   ,"VIIa"                  ,"Xa"                    ,"IIa"                   ,"X"                     ,
@@ -43,6 +43,7 @@ const PetscReal VOLUME_INITIAL_CONCENTRATIONS[NUMBER_OF_SPECIES_IN_VOLUME]
 
 //deactivated factor XI from 3e-5 turn off lps
 
+
 const char SURFACE_SPECIES_NAMES[NUMBER_OF_SPECIES_ON_SURFACE][256]
         = {"TF"                    ,"TFVII"                 ,"TFVIIa"                ,"TFVIIaX"               ,"TFVIIaXa"              ,
            "TFVIIaIX"              ,"TFVIIaXaTFPI"          ,"TFVIIaATIII"           ,"P9"                    ,"IXP9"                  ,
@@ -57,7 +58,7 @@ const char SURFACE_SPECIES_NAMES[NUMBER_OF_SPECIES_ON_SURFACE][256]
            "TMmIIa"                ,"TMIIaPC"               ,"TMmIIaPC"              ,"TMIIaAPC"              ,"IXP9XIa"               ,
            "MRL"                   ,"MR1a"                  ,"MR1b"                  ,"MRT"                   ,"MR6"                   ,
            "MRL_LPS"               ,"MR1a_IL1a"             ,"MR1b_IL1b"             ,"MRT_TNFa"              ,"MR6_IL6"               ,
-           "tPA"                   ,"tPA_PAI"               
+           "tPA"                   ,"tPA_PAI"               ,"ECPR"                  ,"ECPR_Pg"               
           };
 
 
@@ -76,10 +77,10 @@ const PetscReal SURFACE_INITIAL_CONCENTRATIONS_PATCHES[NUMBER_OF_PATCHES][NUMBER
               0.0000e+00,  0.0000e+00,  0.0000e+00,  0.0000e+00,  0.0000e+00,
               0.0000e+00,  0.0000e+00,  0.0000e+00,  0.0000e+00,  0.0000e+00,
               0.0000e+00,  0.0000e+00,  0.0000e+00,  0.0000e+00,  0.0000e+00,
-              7.0000e-11,  0.0000e+00
+              7.0000e-11,  0.0000e+00,  2.7000e-09,  0.0000e+00
            },
-           {  1.2500e-12,  0.0000e+00,  0.0000e+00,  0.0000e+00,  0.0000e+00,
-              0.0000e+00,  0.0000e+00,  0.0000e+00,  2.0757e-09,  0.0000e+00,
+           {  6.2500e-13,  0.0000e+00,  0.0000e+00,  0.0000e+00,  0.0000e+00,
+              0.0000e+00,  0.0000e+00,  0.0000e+00,  1.0379e-09,  0.0000e+00,
               0.0000e+00,  1.0379e-09,  0.0000e+00,  1.1209e-08,  0.0000e+00,
               0.0000e+00,  1.2454e-08,  0.0000e+00,  0.0000e+00,  1.8682e-09,
               0.0000e+00,  0.0000e+00,  8.3029e-09,  0.0000e+00,  0.0000e+00,
@@ -91,7 +92,7 @@ const PetscReal SURFACE_INITIAL_CONCENTRATIONS_PATCHES[NUMBER_OF_PATCHES][NUMBER
               0.0000e+00,  0.0000e+00,  0.0000e+00,  0.0000e+00,  0.0000e+00,
               0.0000e-06,  0.0000e-06,  0.0000e-06,  0.0000e-06,  0.0000e-06,
               0.0000e+00,  0.0000e+00,  0.0000e+00,  0.0000e+00,  0.0000e+00,
-              7.0000e-11,  0.0000e+00
+              7.0000e-11,  0.0000e+00,  2.7000e-09,  0.0000e+00
            },
            {  0.0000e+00,  0.0000e+00,  0.0000e+00,  0.0000e+00,  0.0000e+00,
               0.0000e+00,  0.0000e+00,  0.0000e+00,  0.0000e+00,  0.0000e+00,
@@ -106,12 +107,12 @@ const PetscReal SURFACE_INITIAL_CONCENTRATIONS_PATCHES[NUMBER_OF_PATCHES][NUMBER
               0.0000e+00,  0.0000e+00,  0.0000e+00,  0.0000e+00,  0.0000e+00,
               0.0000e+00,  0.0000e+00,  0.0000e+00,  0.0000e+00,  0.0000e+00,
               0.0000e+00,  0.0000e+00,  0.0000e+00,  0.0000e+00,  0.0000e+00,
-              7.0000e-11,  0.0000e+00
+              7.0000e-11,  0.0000e+00,  2.7000e-09,  0.0000e+00
            }
           };
 
 
 #define NUMBER_OF_REACTIONS_IN_VOLUME    63
-#define NUMBER_OF_REACTIONS_ON_SURFACE   168
+#define NUMBER_OF_REACTIONS_ON_SURFACE   172
 
 #endif

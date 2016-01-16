@@ -67,6 +67,8 @@
 65. MR6_IL6
 66. tPA
 67. tPA_PAI
+68. ECPR
+69. ECPR_Pg
 
 #bulk species:
 
