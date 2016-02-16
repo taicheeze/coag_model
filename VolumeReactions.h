@@ -223,7 +223,7 @@ PetscErrorCode VolumeReactionRateCalculation(PetscReal t,PetscReal x_ptr[NUMBER_
     r_constant[53] = 1.6000e+01;
     r_constant[54] = 1.6000e+01;
     r_constant[55] = 1.0000e+01; 
-    r_constant[56] = 3.0000e+03; //AP to Pn binding
+    r_constant[56] = 4.0000e+02; //AP to Pn binding changed from 3e3
     r_constant[57] = 4.7000e-01; //fibrin degradation to FDP formation, increased from 4.7e-1
     r_constant[58] = 2.1000e-03; //fibrin degradation to FDP formation
     r_constant[59] = 4.0000e+04; //pai stpa binding
@@ -378,7 +378,7 @@ PetscErrorCode VolumeReactionJacobianCalculation(PetscReal t,PetscReal x_ptr[NUM
     r_constant[53] = 1.6000e+01;
     r_constant[54] = 1.6000e+01;
     r_constant[55] = 1.0000e+01; 
-    r_constant[56] = 3.0000e+03; //AP to Pn binding
+    r_constant[56] = 4.0000e+02; //AP to Pn binding
     r_constant[57] = 4.7000e-01; //fibrin degradation to FDP formation, increased from 4.7e-1
     r_constant[58] = 2.1000e-03; //fibrin degradation to FDP formation
     r_constant[59] = 4.0000e+04; //pai stpa binding

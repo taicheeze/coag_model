@@ -534,8 +534,8 @@ PetscErrorCode SurfaceReactionRateCalculation(PetscReal t,PetscReal x_ptr[NUMBER
     r_constant[177] = 1.6500e-03; //unbinding of ECPR_Pg
     r_constant[178] = 1.6400e-02; //kcat of ECPR_pg
     r_constant[179] = 1.5000e-09; //Km of ECPR_pg
-    r_constant[180] = 1.0000e+00; //binding of Pg to ECPR
-    r_constant[181] = 1.0000e+00; //production of Pn from ECPR_Pn
+    r_constant[180] = 0.0000e+00; //binding of Pg to ECPR
+    r_constant[181] = 0.0000e+00; //production of Pn from ECPR_Pn
 
     reaction_rate[0] = r_constant[0] * x_ptr[0] * cv_ptr[0];
     reaction_rate[1] = r_constant[1] * x_ptr[1];
@@ -911,8 +911,8 @@ PetscErrorCode SurfaceReactionJacobianCalculation(PetscReal t,PetscReal x_ptr[NU
     r_constant[177] = 1.6500e-03; //unbinding of ECPR_Pg
     r_constant[178] = 1.6400e-02; //kcat of ECPR_pg
     r_constant[179] = 1.5000e-09; //Km of ECPR_pg
-    r_constant[180] = 1.0000e+00; //binding of Pg to ECPR
-    r_constant[181] = 1.0000e+00; //production of Pn from ECPR_Pn
+    r_constant[180] = 0.0000e+00; //binding of Pg to ECPR
+    r_constant[181] = 0.0000e+00; //production of Pn from ECPR_Pn
 
     J[0][0] =  -1*r_constant[0]*cv_ptr[0] -1*r_constant[2]*cv_ptr[1] -1*r_constant[161]*cv_ptr[44];
     J[0][1] =  +1*r_constant[1];

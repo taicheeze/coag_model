@@ -223,9 +223,9 @@ PetscErrorCode VolumeReactionRateCalculation(PetscReal t,PetscReal x_ptr[NUMBER_
     r_constant[53] = 1.6000e+01;
     r_constant[54] = 1.6000e+01;
     r_constant[55] = 1.0000e+01; 
-    r_constant[56] = 1.0000e+02; //AP to Pn binding
-    r_constant[57] = 1.8800e-00; //fibrin degradation to FDP formation, increased from 4.7
-    r_constant[58] = 1.1000e-03; //fibrin degradation to FDP formation
+    r_constant[56] = 3.0000e+03; //AP to Pn binding
+    r_constant[57] = 4.7000e-01; //fibrin degradation to FDP formation, increased from 4.7e-1
+    r_constant[58] = 2.1000e-03; //fibrin degradation to FDP formation
     r_constant[59] = 4.0000e+04; //pai stpa binding
     r_constant[60] = 1.6000e-02; //increased from 1.6e-2, stpa_pai unbinding
     r_constant[61] = 1.0000e+00; //pai stpa binding
@@ -233,7 +233,7 @@ PetscErrorCode VolumeReactionRateCalculation(PetscReal t,PetscReal x_ptr[NUMBER_
     r_constant[63] = 7.7000e-05; //Pg to pn conversion
     r_constant[64] = 4.1000e-04; //Pg to pn conversion
     r_constant[65] = 3.0000e-04; //Pg to pn conversion
-    r_constant[66] = 1.8000e-01; //should be 9e-2
+    r_constant[66] = 9.0000e-02; //should be 9e-2
     r_constant[67] = 1.0000e-03; //stpa_pai unbinding
     r_constant[68] = 2.8900e-03; //stpa hepatic clearance
 
@@ -378,9 +378,9 @@ PetscErrorCode VolumeReactionJacobianCalculation(PetscReal t,PetscReal x_ptr[NUM
     r_constant[53] = 1.6000e+01;
     r_constant[54] = 1.6000e+01;
     r_constant[55] = 1.0000e+01; 
-    r_constant[56] = 1.0000e+02; //AP to Pn binding
-    r_constant[57] = 1.8800e-00; //fibrin degradation to FDP formation, increased from 4.7
-    r_constant[58] = 1.1000e-03; //fibrin degradation to FDP formation
+    r_constant[56] = 3.0000e+03; //AP to Pn binding
+    r_constant[57] = 4.7000e-01; //fibrin degradation to FDP formation, increased from 4.7e-1
+    r_constant[58] = 2.1000e-03; //fibrin degradation to FDP formation
     r_constant[59] = 4.0000e+04; //pai stpa binding
     r_constant[60] = 1.6000e-02; //increased from 1.6e-2, stpa_pai unbinding
     r_constant[61] = 1.0000e+00; //pai stpa binding
@@ -388,7 +388,7 @@ PetscErrorCode VolumeReactionJacobianCalculation(PetscReal t,PetscReal x_ptr[NUM
     r_constant[63] = 7.7000e-05; //Pg to pn conversion
     r_constant[64] = 4.1000e-04; //Pg to pn conversion
     r_constant[65] = 3.0000e-04; //Pg to pn conversion
-    r_constant[66] = 1.8000e-01; //should be 9e-2
+    r_constant[66] = 9.0000e-02; //should be 9e-2
     r_constant[67] = 1.0000e-03; //stpa_pai unbinding
     r_constant[68] = 2.8900e-03; //stpa hepatic clearance
 
