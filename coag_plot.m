@@ -47,11 +47,11 @@ for j=cutoff+1:length(species_list);
         y(i,j)=amount/totlength;
     end
 end
-for k=1:length(species_list)
-    figure(k)
-    plot(t1,y(:,k))
-    title(species_list{k})
-end
+% for k=1:length(species_list)
+%     figure(k)
+%     plot(t1,y(:,k))
+%     title(species_list{k})
+% end
         
 % Z=[t1, 1e6*(y(:,2)+1.2*y(:,5)), 1e6*y(:,3), 1e6*y(:,1)];
  %%

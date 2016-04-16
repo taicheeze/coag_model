@@ -521,24 +521,25 @@ PetscErrorCode SurfaceReactionRateCalculation(PetscReal t,PetscReal x_ptr[NUMBER
     r_constant[164] = 7.7000e-05;
     r_constant[165] = 4.1000e-04;
     r_constant[166] = 3.0000e-04;
-    r_constant[167] = 3.1000e-05; //approx with fviia release 3.1000e-04 release of tpa to plasma
+    r_constant[167] = 3.1000e-06; //approx with fviia release 3.1000e-04 release of tpa to plasma
     r_constant[168] = 2.3155e-09; //approx with ATF 2.3155e-03 production of tpa induced by fibrin
     r_constant[169] = 1.0000e+00; //release of tpa to plasma
     r_constant[170] = 1.0000e+00; //production of tpa induced by fibrin
     r_constant[171] = 1.6000e-02; //fibrin induced tpa_pai unbinding rate such that tpa=tpa_pai with high fibrin
     r_constant[172] = 1.0000e+00; //unbinding of tpa pai
-    r_constant[173] = 1.0000e-01; //degradation of tpa
+    r_constant[173] = 1.1600e-03; //degradation of tpa
     r_constant[174] = 1.0000e+00; //degradation of tpa
     r_constant[175] = 1.0000e-03; //michaelis constant of tpa_pai unbinding
     r_constant[176] = 3.3000e+00; //binding of Pg to ECPR
     r_constant[177] = 1.6500e-03; //unbinding of ECPR_Pg
     r_constant[178] = 1.6400e-02; //kcat of ECPR_pg
     r_constant[179] = 1.5000e-09; //Km of ECPR_pg
-    r_constant[180] = 0.0000e+00; //binding of Pg to ECPR
-    r_constant[181] = 0.0000e+00; //production of Pn from ECPR_Pn
+    r_constant[180] = 1.0000e+00; //binding of Pg to ECPR
+    r_constant[181] = 1.0000e+00; //production of Pn from ECPR_Pn
+    r_constant[182] = 7.0000e-11; //base production of tPa to offset degradation and release, will reach steady state at base tpa level
 
     reaction_rate[0] = r_constant[0] * x_ptr[0] * cv_ptr[0];
-    reaction_rate[1] = r_const200ant[1] * x_ptr[1];
+    reaction_rate[1] = r_constant[1] * x_ptr[1];
     reaction_rate[2] = r_constant[2] * x_ptr[0] * cv_ptr[1];
     reaction_rate[3] = r_constant[3] * x_ptr[2];
     reaction_rate[4] = r_constant[4] * x_ptr[2] * cv_ptr[0];
@@ -700,10 +701,10 @@ PetscErrorCode SurfaceReactionRateCalculation(PetscReal t,PetscReal x_ptr[NUMBER
     reaction_rate[160] = r_constant[160] * x_ptr[0];
     reaction_rate[161] = r_constant[161] * x_ptr[0] * cv_ptr[44];
     reaction_rate[162] = r_constant[162] * x_ptr[65] * cv_ptr[63];
-    reaction_rate[163] = r_constant[171]*r_constant[172]*x_ptr[66]*(cv_ptr[49]+2*cv_ptr[54])/(r_constant[175] + (cv_ptr[49]+2*cv_ptr[54]));   
-    reaction_rate[164] = r_constant[163] * cv_ptr[59] * x_ptr[65] * (cv_ptr[49]+2*cv_ptr[54])/ (r_constant[165]*(cv_ptr[49]+2*cv_ptr[54])+r_constant[165]*r_constant[166]+(cv_ptr[49]+2*cv_ptr[54])*cv_ptr[59]+r_constant[164]*cv_ptr[59]);
+    reaction_rate[163] = r_constant[171]*r_constant[172]*x_ptr[66]*(cv_ptr[49]+2*cv_ptr[54]+(2/3)*(cv_ptr[46]+2*cv_ptr[52]))/(r_constant[175] + (cv_ptr[49]+2*cv_ptr[54]+(2/3)*(cv_ptr[46]+2*cv_ptr[52])));   
+    reaction_rate[164] = r_constant[163] * cv_ptr[59] * x_ptr[65] * (cv_ptr[49]+2*cv_ptr[54]+(2/3)*(cv_ptr[46]+2*cv_ptr[52]))/ (r_constant[165]*(cv_ptr[49]+2*cv_ptr[54]+(2/3)*(cv_ptr[46]+2*cv_ptr[52]))+r_constant[165]*r_constant[166]+(cv_ptr[49]+2*cv_ptr[54]+(2/3)*(cv_ptr[46]+2*cv_ptr[52]))*cv_ptr[59]+r_constant[164]*cv_ptr[59]);
     reaction_rate[165] = r_constant[169]*r_constant[167] * x_ptr[65];
-    reaction_rate[166] = r_constant[170]*r_constant[168]*(cv_ptr[49]+2*cv_ptr[54]);
+    reaction_rate[166] = r_constant[170]*r_constant[168]*(cv_ptr[49]+2*cv_ptr[54])+r_constant[182]*(r_constant[167]+r_constant[173]);
     reaction_rate[167] = r_constant[173]*r_constant[174]*x_ptr[65];
     reaction_rate[168] = r_constant[180]*r_constant[176] * x_ptr[67] * cv_ptr[59];
     reaction_rate[169] = r_constant[180]*r_constant[177] * x_ptr[68];
@@ -898,21 +899,23 @@ PetscErrorCode SurfaceReactionJacobianCalculation(PetscReal t,PetscReal x_ptr[NU
     r_constant[164] = 7.7000e-05;
     r_constant[165] = 4.1000e-04;
     r_constant[166] = 3.0000e-04;
-    r_constant[167] = 3.1000e-05; //approx with fviia release 3.1000e-04 release of tpa to plasma
+    r_constant[167] = 3.1000e-06; //approx with fviia release 3.1000e-04 release of tpa to plasma
     r_constant[168] = 2.3155e-09; //approx with ATF 2.3155e-03 production of tpa induced by fibrin
     r_constant[169] = 1.0000e+00; //release of tpa to plasma
     r_constant[170] = 1.0000e+00; //production of tpa induced by fibrin
     r_constant[171] = 1.6000e-02; //fibrin induced tpa_pai unbinding rate such that tpa=tpa_pai with high fibrin
     r_constant[172] = 1.0000e+00; //unbinding of tpa pai
-    r_constant[173] = 1.0000e-01; //degradation of tpa
+    r_constant[173] = 1.1600e-03; //degradation of tpa
     r_constant[174] = 1.0000e+00; //degradation of tpa
     r_constant[175] = 1.0000e-03; //michaelis constant of tpa_pai unbinding
     r_constant[176] = 3.3000e+00; //binding of Pg to ECPR
     r_constant[177] = 1.6500e-03; //unbinding of ECPR_Pg
     r_constant[178] = 1.6400e-02; //kcat of ECPR_pg
     r_constant[179] = 1.5000e-09; //Km of ECPR_pg
-    r_constant[180] = 0.0000e+00; //binding of Pg to ECPR
-    r_constant[181] = 0.0000e+00; //production of Pn from ECPR_Pn
+    r_constant[180] = 1.0000e+00; //binding of Pg to ECPR
+    r_constant[181] = 1.0000e+00; //production of Pn from ECPR_Pn
+    r_constant[182] = 7.0000e-11; //base production of tPa to offset degradation and release, will reach steady state at base tpa level
+
 
     J[0][0] =  -1*r_constant[0]*cv_ptr[0] -1*r_constant[2]*cv_ptr[1] -1*r_constant[161]*cv_ptr[44];
     J[0][1] =  +1*r_constant[1];
@@ -1182,9 +1185,9 @@ PetscErrorCode SurfaceReactionJacobianCalculation(PetscReal t,PetscReal x_ptr[NU
     J[64][59] =  +1*r_constant[148]*cv_ptr[42];
     J[64][64] =  -1*r_constant[149];
     J[65][65] =  -1*r_constant[162]*cv_ptr[63] -1*r_constant[167]*r_constant[169]-r_constant[173]*r_constant[174];
-    J[65][66] =  +1*r_constant[171]*r_constant[172]*(cv_ptr[49]+2*cv_ptr[54])/(r_constant[175]+(cv_ptr[49]+2*cv_ptr[54]));
+    J[65][66] =  +1*r_constant[171]*r_constant[172]*(cv_ptr[49]+2*cv_ptr[54]+(2/3)*(cv_ptr[46]+2*cv_ptr[52]))/(r_constant[175]+(cv_ptr[49]+2*cv_ptr[54]+(2/3)*(cv_ptr[46]+2*cv_ptr[52])));
     J[66][65] =  +1*r_constant[162]*cv_ptr[63];
-    J[66][66] =  -1*r_constant[171]*r_constant[172]*(cv_ptr[49]+2*cv_ptr[54])/(r_constant[175]+(cv_ptr[49]+2*cv_ptr[54]));
+    J[66][66] =  -1*r_constant[171]*r_constant[172]*(cv_ptr[49]+2*cv_ptr[54]+(2/3)*(cv_ptr[46]+2*cv_ptr[52]))/(r_constant[175]+(cv_ptr[49]+2*cv_ptr[54]+(2/3)*(cv_ptr[46]+2*cv_ptr[52])));
     J[67][65] =  +1*r_constant[181]*r_constant[178] * x_ptr[68] * (cv_ptr[49]+2*cv_ptr[54])/ (r_constant[179]*(cv_ptr[49]+2*cv_ptr[54])+r_constant[179]*r_constant[166]+(cv_ptr[49]+2*cv_ptr[54])*x_ptr[68]+r_constant[164]*x_ptr[68]);
     J[67][67] =  -1*r_constant[180]*r_constant[176] * cv_ptr[59];
     J[67][68] =  +1*r_constant[180]*r_constant[177] +1*r_constant[178]*x_ptr[65]*(cv_ptr[49]+2*cv_ptr[54])*r_constant[179]*(r_constant[166]+(cv_ptr[49]+2*cv_ptr[54]))/(((cv_ptr[49]+2*cv_ptr[54])*r_constant[179]+r_constant[179]*r_constant[166]+(cv_ptr[49]+2*cv_ptr[54])*x_ptr[68]+r_constant[164]*x_ptr[68])*((cv_ptr[49]+2*cv_ptr[54])*r_constant[179]+r_constant[179]*r_constant[166]+(cv_ptr[49]+2*cv_ptr[54])*x_ptr[68]+r_constant[164]*x_ptr[68])) + 1*r_constant[178]*cv_ptr[65]*(cv_ptr[49]+2*cv_ptr[54])*r_constant[179]*(r_constant[166]+(cv_ptr[49]+2*cv_ptr[54]))/(((cv_ptr[49]+2*cv_ptr[54])*r_constant[179]+r_constant[179]*r_constant[166]+(cv_ptr[49]+2*cv_ptr[54])*x_ptr[68]+r_constant[164]*x_ptr[68])*((cv_ptr[49]+2*cv_ptr[54])*r_constant[179]+r_constant[179]*r_constant[166]+(cv_ptr[49]+2*cv_ptr[54])*x_ptr[68]+r_constant[164]*x_ptr[68]));
