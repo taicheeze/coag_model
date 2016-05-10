@@ -121,7 +121,7 @@ const PetscInt OUTLET_Y_BOUNDARIES[2] = {0, NUMBER_OF_Y_GRIDS-1};
 #define SAFETY_FRACTION 0.9
 
 //#define VX_MAX           1.25e-3 is 20 shear
-#define VX_MAX           6.25e-4
+#define VX_MAX           1.25e-3
 
 #define FLUX_CONVERSION_RATIO  1.0  // boundary flux constant due to unit conversion
 

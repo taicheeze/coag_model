@@ -522,7 +522,7 @@ PetscErrorCode SurfaceReactionRateCalculation(PetscReal t,PetscReal x_ptr[NUMBER
     r_constant[165] = 4.1000e-04;
     r_constant[166] = 3.0000e-04;
     r_constant[167] = 3.1000e-04; //approx with fviia release 3.1000e-04 release of tpa to plasma
-    r_constant[168] = 2.3155e-10; //approx with ATF 2.3155e-03 production of tpa induced by fibrin
+    r_constant[168] = 2.3155e-11; //approx with ATF 2.3155e-03 production of tpa induced by fibrin
     r_constant[169] = 1.0000e+00; //release of tpa to plasma
     r_constant[170] = 1.0000e+00; //production of tpa induced by fibrin
     r_constant[171] = 1.6000e-02; //fibrin induced tpa_pai unbinding rate such that tpa=tpa_pai with high fibrin
@@ -900,7 +900,7 @@ PetscErrorCode SurfaceReactionJacobianCalculation(PetscReal t,PetscReal x_ptr[NU
     r_constant[165] = 4.1000e-04;
     r_constant[166] = 3.0000e-04;
     r_constant[167] = 3.1000e-04; //approx with fviia release 3.1000e-04 release of tpa to plasma
-    r_constant[168] = 2.3155e-10; //approx with ATF 2.3155e-03 production of tpa induced by fibrin
+    r_constant[168] = 2.3155e-11; //approx with ATF 2.3155e-03 production of tpa induced by fibrin
     r_constant[169] = 1.0000e+00; //release of tpa to plasma
     r_constant[170] = 1.0000e+00; //production of tpa induced by fibrin
     r_constant[171] = 1.6000e-02; //fibrin induced tpa_pai unbinding rate such that tpa=tpa_pai with high fibrin

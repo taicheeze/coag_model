@@ -68,7 +68,7 @@
 66. tPA
 67. tPA_PAI
 68. ECPR
-69. ECPR_PG
+69. ECPR_Pg
 
 #bulk species:
 
@@ -139,3 +139,4 @@
 65. FDP
 66. stPA
 67. stPA_PAI
+68. APC_PAI
