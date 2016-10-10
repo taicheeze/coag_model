@@ -44,21 +44,23 @@
 // y grids are equally spaced near the bottom (with a small y), and are geometrically enlarged upwards out of the bottom region
 #define NUMBER_OF_X_GRIDS         50 //reduced from 100 
 #define NUMBER_OF_Y_GRIDS          25 //reduced from 25
-#define NUMBER_OF_Y_GRIDS_BOTTOM   8 // this has to be at least 2 or it will cause error in diffusion solver ,reduced from 10
+#define NUMBER_OF_Y_GRIDS_BOTTOM   10 // this has to be at least 2 or it will cause error in diffusion solver ,reduced from 10
 
 #define NUMBER_OF_GRIDS             NUMBER_OF_X_GRIDS*NUMBER_OF_Y_GRIDS
 
 #define X_LENGTH          10000.0e-6 //reduced from 20000e-6
-#define Y_LENGTH            250.0e-6 //reduced from 250e-6
-#define Y_BOTTOM_LENGTH      20.0e-6
+#define Y_LENGTH            10.0e-6
+//reduced from 250e-6
+#define Y_BOTTOM_LENGTH      1.0e-6
+//reduced from 20e-6
 #define BOTTOM_LAYER_DY      Y_BOTTOM_LENGTH/(PetscReal)NUMBER_OF_Y_GRIDS_BOTTOM
 
 #define DX_LENGTH        X_LENGTH/(PetscReal)NUMBER_OF_X_GRIDS
 
 #define NUMBER_OF_PATCHES 3
 
-const PetscReal PATCH_LEFT_BOUNDARIES[NUMBER_OF_PATCHES]  = {0.0e-3, 2.0e-3, 3.0e-3}; //previous patch at 2mm to 5mm
-const PetscReal PATCH_RIGHT_BOUNDARIES[NUMBER_OF_PATCHES] = {2.0e-3, 3.0e-3, 10.0e-3}; //previous length of channel 20mm
+const PetscReal PATCH_LEFT_BOUNDARIES[NUMBER_OF_PATCHES]  = {0.0e-3, 5.0e-3, 6.0e-3};
+const PetscReal PATCH_RIGHT_BOUNDARIES[NUMBER_OF_PATCHES] = {5.0e-3, 6.0-3, 10.0e-3};
 
 /*
  * boundary conditions
@@ -86,12 +88,12 @@ const PetscInt OUTLET_Y_BOUNDARIES[2] = {0, NUMBER_OF_Y_GRIDS-1};
  */
 
 #define T_START          0.0
-#define T_END         3000.0
+#define T_END         5000.0
 #define DT_MIN           0.5e-4
 #define DT_MAX           1.0
 //#define DT_STEP          0.01
 
-#define OUTPUT_DT       10.0
+#define OUTPUT_DT       20.0
 
 // max change time step controller, define to use it, undefine to use others
 #define USE_MAX_CHANGE_STEP_CONTROLLER
@@ -99,7 +101,7 @@ const PetscInt OUTLET_Y_BOUNDARIES[2] = {0, NUMBER_OF_Y_GRIDS-1};
 #define C_RELATIVE_TOL_MIN  0.5e-3
 #define C_RELATIVE_TOL_MAX  1.0e-3
 
-#define TIMESTEP_INCREASE_RATIO  1.01
+#define TIMESTEP_INCREASE_RATIO  1.1
 #define TIMESTEP_DECREASE_RATIO  0.9
 
 // double stepping time step controller, define to use it, undefine to use others
@@ -115,13 +117,15 @@ const PetscInt OUTLET_Y_BOUNDARIES[2] = {0, NUMBER_OF_Y_GRIDS-1};
 // absolute error tolerance 
 #define ATOL 1.0e-9 //relaxed from 1e-9
 // relative error tolerance
-#define RTOL 0.5e-2
+#define RTOL 5.0e-3 //lowered from 5e-3
 
 // safety fraction
 #define SAFETY_FRACTION 0.9
 
-//#define VX_MAX           1.25e-3 is 20 shear
-#define VX_MAX           1.25e-3
+//#define VX_MAX           1.25e-2
+#define VX_MAX           5.0e-4
+
+//5.0e-4 is 20 shear for 100um and below
 
 #define FLUX_CONVERSION_RATIO  1.0  // boundary flux constant due to unit conversion
 

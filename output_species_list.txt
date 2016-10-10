@@ -1,15 +1,15 @@
-11
-PAI
+9
 stPA
-stPA_PAI
+PAI
 Fg
 FnII2
-FnII
-FnI2
-FnI
 Pn
 Pg
+II
 IIa
-1
+Pn_AP
+3
 tPA
+artPA
+ictPA
 

@@ -57,8 +57,8 @@
 
 #define NUMBER_OF_PATCHES 3
 
-const PetscReal PATCH_LEFT_BOUNDARIES[NUMBER_OF_PATCHES]  = {0.0e-3, 2.0e-3, 5.0e-3};
-const PetscReal PATCH_RIGHT_BOUNDARIES[NUMBER_OF_PATCHES] = {2.0e-3, 5.0e-3, 20.0e-3};
+const PetscReal PATCH_LEFT_BOUNDARIES[NUMBER_OF_PATCHES]  = {0.0e-3, 3.0e-3, 5.0e-3};
+const PetscReal PATCH_RIGHT_BOUNDARIES[NUMBER_OF_PATCHES] = {3.0e-3, 5.0e-3, 20.0e-3};
 
 /*
  * boundary conditions
@@ -121,7 +121,7 @@ const PetscInt OUTLET_Y_BOUNDARIES[2] = {0, NUMBER_OF_Y_GRIDS-1};
 #define SAFETY_FRACTION 0.9
 
 //#define VX_MAX           1.25e-3 is 20 shear
-#define VX_MAX           1.25e-2
+#define VX_MAX           0.00e-2
 
 #define FLUX_CONVERSION_RATIO  1.0  // boundary flux constant due to unit conversion
 

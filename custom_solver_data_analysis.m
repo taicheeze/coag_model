@@ -6,13 +6,16 @@
 % dx: the x direction length of grids, dimension: {ny, nx}
 % dy: the y direction length of grid, dimension: {ny, nx}
 
-function [t_list, conc_list, species_list, x, y, dx, dy] = custom_solver_data_analysis(number_of_intervals)
+function [t_list, conc_list, species_list, x, y, dx, dy] = custom_solver_data_analysis(number_of_intervals,foldnum)
+    
+    foldname=['output_' num2str(foldnum)];
+    eval(['cd ./outputs_september_2016/' foldname]);
     eval('coordinates');
     x=vec2mat(eval('x_volume_global'),nx);
     y=vec2mat(eval('y_volume_global'),nx);
     dx=vec2mat(eval('dx_volume_global'),nx);
     dy=vec2mat(eval('dy_volume_global'),nx);
-    
+    eval('cd ../..')
     species_list_file = fopen('output_species_list.txt','r');
 
     tline = fgetl(species_list_file);
@@ -46,7 +49,7 @@ function [t_list, conc_list, species_list, x, y, dx, dy] = custom_solver_data_an
     end
     
     fclose(species_list_file);
-   
+    eval(['cd ./outputs_september_2016/' foldname]);
     number_of_species = number_of_volume_species + number_of_surface_species;
     species_list = [volume_species_list, surface_species_list];
 
@@ -60,3 +63,4 @@ function [t_list, conc_list, species_list, x, y, dx, dy] = custom_solver_data_an
             conc_list{i,j} = vec2mat(eval(species_list{j}),nx);
         end
     end
+    eval('cd ../..')

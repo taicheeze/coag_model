@@ -1,5 +1,5 @@
 
-CFLAGS	        = 
+CFLAGS	        =
 FFLAGS	        =
 CPPFLAGS        =
 FPPFLAGS        =
@@ -13,7 +13,7 @@ include ${PETSC_DIR}/conf/variables
 include ${PETSC_DIR}/conf/rules
 
 coagulation: Coagulation.o chkopts
-	-${CLINKER} -o Coagulation Coagulation.o ${PETSC_TS_LIB}
+	-${CLINKER} -g -o Coagulation Coagulation.o ${PETSC_TS_LIB}
 	${RM} Coagulation.o
 
 coagulationo3: Coagulation.o chkopts

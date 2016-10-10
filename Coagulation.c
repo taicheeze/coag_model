@@ -14,7 +14,6 @@ T*/
 #include <petscsnes.h>
 #include "Headers.h"
 
-
 #undef __FUNCT__
 #define __FUNCT__ "main"
 int main(int argc,char **argv)
@@ -32,6 +31,8 @@ int main(int argc,char **argv)
   VOLUME_DIFFUSION_SOLVER      volume_diffusion_solver;
   TIME_STEP_CONTROLLER         time_step_controller;
   OUTPUT_HANDLER               output_handler;
+  PetscInt		       TXA=1,AP=0;
+  PetscScalar		       scalefac=0.5,shiftfac=5.0e-4;
 //  PetscBool                    flg = PETSC_FALSE;
 //  PetscBool                    matlab_function = PETSC_FALSE;
 #ifdef PETSC_USE_LOG
@@ -190,12 +191,12 @@ int main(int argc,char **argv)
 	ierr = DMCreateGlobalVector(my_data.da_volume_dof_1, &myvec4); CHKERRQ(ierr);
 	Vec myvec6;
 	ierr = DMCreateGlobalVector(my_data.da_volume_dof_1, &myvec6); CHKERRQ(ierr);
-/*	Vec myvec5;*/
-/*	ierr = DMCreateGlobalVector(my_data.da_volume_dof_1, &myvec5); CHKERRQ(ierr);*/
 /*	Vec myvec2;*/
 /*	ierr = DMCreateGlobalVector(my_data.da_volume_dof_1, &myvec2); CHKERRQ(ierr);*/
 /*	Vec myvec3;*/
 /*	ierr = DMCreateGlobalVector(my_data.da_volume_dof_1, &myvec3); CHKERRQ(ierr);*/
+/*	Vec myvec5;*/
+/*	ierr = DMCreateGlobalVector(my_data.da_volume_dof_1, &myvec5); CHKERRQ(ierr);*/
 
 
 #ifdef PETSC_USE_LOG
@@ -289,11 +290,11 @@ int main(int argc,char **argv)
       ierr = PetscLogEventEnd(volume_reaction,0,0,0,0); CHKERRQ(ierr);
 #endif
 //freeze species
-      getSingleSpeciesVec(my_data.c_volume_global, myvec, my_data.volume_species_scatter[54]);
-      getSingleSpeciesVec(my_data.c_volume_global, myvec1, my_data.volume_species_scatter[49]);
-      getSingleSpeciesVec(my_data.c_volume_global, myvec4, my_data.volume_species_scatter[55]);
-      getSingleSpeciesVec(my_data.c_volume_global, myvec6, my_data.volume_species_scatter[58]);
-/*      getSingleSpeciesVec(my_data.c_volume_global, myvec2, my_data.volume_species_scatter[52]);*/
+      getSingleSpeciesVec(my_data.c_volume_global, myvec, my_data.volume_species_scatter[44]);
+      getSingleSpeciesVec(my_data.c_volume_global, myvec1, my_data.volume_species_scatter[39]);
+      getSingleSpeciesVec(my_data.c_volume_global, myvec4, my_data.volume_species_scatter[45]);
+      getSingleSpeciesVec(my_data.c_volume_global, myvec6, my_data.volume_species_scatter[48]);
+/*      getSingleSpeciesVec(my_data.c_volume_global, myvec2, my_data.volume_species_scatter[50]);*/
 /*      getSingleSpeciesVec(my_data.c_volume_global, myvec3, my_data.volume_species_scatter[53]);*/
 /*      getSingleSpeciesVec(my_data.c_volume_global, myvec5, my_data.volume_species_scatter[56]);*/
 
@@ -393,11 +394,11 @@ int main(int argc,char **argv)
 #endif
 //freeze species
 
-      restoreSingleSpeciesVec(my_data.c_volume_global, myvec, my_data.volume_species_scatter[54]);
-      restoreSingleSpeciesVec(my_data.c_volume_global, myvec1, my_data.volume_species_scatter[49]);
-      restoreSingleSpeciesVec(my_data.c_volume_global, myvec4, my_data.volume_species_scatter[55]);
-      restoreSingleSpeciesVec(my_data.c_volume_global, myvec6, my_data.volume_species_scatter[58]);
-/*      restoreSingleSpeciesVec(my_data.c_volume_global, myvec2, my_data.volume_species_scatter[52]);*/
+      restoreSingleSpeciesVec(my_data.c_volume_global, myvec, my_data.volume_species_scatter[44]);
+      restoreSingleSpeciesVec(my_data.c_volume_global, myvec1, my_data.volume_species_scatter[39]);
+      restoreSingleSpeciesVec(my_data.c_volume_global, myvec4, my_data.volume_species_scatter[45]);
+      restoreSingleSpeciesVec(my_data.c_volume_global, myvec6, my_data.volume_species_scatter[48]);
+/*      restoreSingleSpeciesVec(my_data.c_volume_global, myvec2, my_data.volume_species_scatter[50]);*/
 /*      restoreSingleSpeciesVec(my_data.c_volume_global, myvec3, my_data.volume_species_scatter[53]);*/
 /*      restoreSingleSpeciesVec(my_data.c_volume_global, myvec5, my_data.volume_species_scatter[56]);*/
 
@@ -410,7 +411,22 @@ int main(int argc,char **argv)
     t    = time_step_controller.new_t;
     dt   = time_step_controller.new_dt;
     time_step_controller.flg = -1;
-
+    if(t >= 4000 && TXA==0){
+      Vec txavec;
+	ierr = DMCreateGlobalVector(my_data.da_volume_dof_1, &txavec); CHKERRQ(ierr);
+	getSingleSpeciesVec(my_data.c_volume_global, txavec, my_data.volume_species_scatter[49]);
+	VecScale(txavec,scalefac);
+	restoreSingleSpeciesVec(my_data.c_volume_global, txavec, my_data.volume_species_scatter[49]);
+	TXA=1;
+     }
+    if(t >= 4000 && AP==0){
+      Vec apvec;
+	ierr = DMCreateGlobalVector(my_data.da_volume_dof_1, &apvec); CHKERRQ(ierr);
+	getSingleSpeciesVec(my_data.c_volume_global, apvec, my_data.volume_species_scatter[51]);
+	VecShift(apvec,shiftfac);
+	restoreSingleSpeciesVec(my_data.c_volume_global, apvec, my_data.volume_species_scatter[51]);
+	AP=1;
+     }
     if(t >= output_handler.next_output){
       ierr = OutputHandlerSingleOutput(&output_handler, t, &my_data); CHKERRQ(ierr);
 /*
