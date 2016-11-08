@@ -1,0 +1,34 @@
+NA = 6.022e23
+#platelet conc, 6.6e-13[mol/m^2] max
+PL = 3.3000e-13[mol/m^2]
+dilution = 1
+#initial values
+P2_init = 2000*PL
+P5_init = 3000*PL
+P8_init = 450*PL
+P9_init = 250*PL
+P9s_init = 250*PL
+P10_init = 2700*PL
+substrate_init = 0[mol/l] #formerly 1e-6[mol/l]
+VII_init = 1e-8*dilution[mol/l]
+VIIa_init = 1e-10*dilution[mol/l]
+X_init = 1.6e-7*dilution[mol/l]
+IX_init = 9e-8*dilution[mol/l]
+II_init = 1.4e-6*dilution[mol/l]
+VIII_init = 0.7e-9*dilution[mol/l]
+V_init = 2e-8*dilution[mol/l]
+TFPI_init = 2.5e-9*dilution[mol/l]
+ATIII_init = 3.4e-6*dilution[mol/l]
+TF_init = 6.25e-13[mol/m^2]
+PC_init = 6.5e-5*dilution[mol/m^3]
+APC_init = 0*dilution[mol/l]
+TM_init = 2.5e-10[mol/m^2]
+Fg_init = 9e-6[mol/l]
+Pg_init = 2e-6[mol/l]
+PAI_init = 4e-10[mol/l]
+AP_init = 1e-6[mol/l]
+tPA_init = 7e-11[mol/m^2]
+stPA_PAI_init = 7e-8[mol/m^3]
+ECPR_init = 2.7e-9[mol/m^2]
+artPA_init = 2.974e-12[mol/m^2]
+
