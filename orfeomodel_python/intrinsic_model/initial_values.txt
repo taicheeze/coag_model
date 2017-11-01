@@ -1,6 +1,6 @@
 NA = 6.022e23
-#platelet conc, 6.6e-13[mol/m^2] max
-PL = 3.3000e-13[mol/m^2]
+#platelet conc, 1e-13[mol/m^2] max
+PL = 5.0000e-14[mol/m^2]
 dilution = 1
 #initial values
 P2_init = 2000*PL
@@ -32,4 +32,5 @@ stPA_PAI_init = 7e-8[mol/m^3]
 ECPR_init = 2.7e-9[mol/m^2]
 artPA_init = 2.974e-12[mol/m^2]
 ictPA_init = 7.5e-11[mol/m^2]
+pPAI_init = 2.66e-10[mol/m^2]
 

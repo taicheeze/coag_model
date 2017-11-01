@@ -59,8 +59,8 @@
 
 #define NUMBER_OF_PATCHES 3
 
-const PetscReal PATCH_LEFT_BOUNDARIES[NUMBER_OF_PATCHES]  = {0.0e-3, 5.0e-3, 6.0e-3};
-const PetscReal PATCH_RIGHT_BOUNDARIES[NUMBER_OF_PATCHES] = {5.0e-3, 6.0-3, 10.0e-3};
+const PetscReal PATCH_LEFT_BOUNDARIES[NUMBER_OF_PATCHES]  = {0.0e-3, 3.0e-3, 5.0e-3};
+const PetscReal PATCH_RIGHT_BOUNDARIES[NUMBER_OF_PATCHES] = {3.0e-3, 5.0e-3, 10.0e-3};
 
 /*
  * boundary conditions
@@ -122,8 +122,8 @@ const PetscInt OUTLET_Y_BOUNDARIES[2] = {0, NUMBER_OF_Y_GRIDS-1};
 // safety fraction
 #define SAFETY_FRACTION 0.9
 
-//#define VX_MAX           1.25e-2
-#define VX_MAX           5.0e-4
+//#define VX_MAX           5.0e-4 for 20 shear rate for 100um channel
+#define VX_MAX           5e-3
 
 //5.0e-4 is 20 shear for 100um and below
 

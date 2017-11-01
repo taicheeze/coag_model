@@ -31,8 +31,8 @@ int main(int argc,char **argv)
   VOLUME_DIFFUSION_SOLVER      volume_diffusion_solver;
   TIME_STEP_CONTROLLER         time_step_controller;
   OUTPUT_HANDLER               output_handler;
-  PetscInt		       TXA=1,AP=0;
-  PetscScalar		       scalefac=0.5,shiftfac=5.0e-4;
+  PetscInt		       TXA=1,AP=1;
+  PetscScalar		       scalefac=0.1,shiftfac=1.0e-3;
 //  PetscBool                    flg = PETSC_FALSE;
 //  PetscBool                    matlab_function = PETSC_FALSE;
 #ifdef PETSC_USE_LOG
