@@ -49,8 +49,10 @@ To create a new model:
 These files are ready to be used if:
 
 1. All stoichiometry coefficients are 1.
-2. You want the entire bottom surface to be the injury site.
+2. You want the entire bottom surface to be the injury site. (You may need to adjust the settings file to account for this)
 3. All reactions are mass action.
+
+..* Once they are ready to be used, copy these files and overwrite the files already in the main directory. You may adjust the settings or you can just run the model at this point.
 
 ### Adjusting the Stoichiometry Matrix
 If you have a reaction in which there is a non-1 coefficient in the stoichiometry matrix, you must open the appropriate header file (if it's a volume reaction, open VolumeReactions.h, if it's a surface reaction, open SurfaceReactions.h), find where the stoichiometry is defined, it should be after the line "PetscInt  volume_stoichiometry[NUMBER_OF_SPECIES_IN_VOLUME][NUMBER_OF_REACTIONS_IN_VOLUME]"
@@ -80,4 +82,5 @@ When using the python script to add reaction that isn't in a standard mass actio
 4. Re-define the reaction rate using r_constants for the different constants, x_ptr for the different species (these are volume species in the volume header and surface species in the surface header), for the correct index number of species can be figured out with the list of reactions at the top as well and cv_ptr to refer to volume species in SurfaceReactions.h. Additional constants may be defined by adding more values to the r_constant array. 
 For example, we can have a Michaelis-Menten reaction in which A is converted to B with a catalyst C. The rate at which A is converted to B is given by r1[C][A]/(r2+[A]), we can write that as: reaction_rate[48] = r_constant[48] * x_ptr[50] * x_ptr[39] / (r_constant[49] + x_ptr[39]); if 48 was the reaction number, 39 is the index of the catalyst, and 50 is the index for the substrate.
 5. Re-define the jacobian matrix. The jacobian matrix in our solver has to be explicitly defined. Copy any additional constants that were used in the constants array above the jacobian matrix, these two arrays should be identical to avoid confusion. The jacobian is the first partial derivative of each species with respect to all species. For example, the entry J[0][0] refers to the partial derivative of the first species with respect to the first species. So for any concentrations that are affected by the reaction (involved in the stoichiometry matrix), we need to consider its partial derivative with respect to all other species involved in the reaction. For mass-action reactions, this part is done automatically, for non-mass action reactions, this part is also done automatically, but incorrectly, you will need to not only add the correct value, but you must also remove the incorrect value.
-Using the same example: r1[C][A]/(r2+[A]), if the index values for A, B and C are 39, 54 and 50 respectively, then J[39][39],J[39][50],J[39][54],J[54][39],J[54][50],J[54][54] must be edited.
+Using the same example: r1[C][A]/(r2+[A]), if the index values for A, B and C are 39, 54 and 50 respectively, then J[39][39], J[39][50], J[39][54], J[54][39], J[54][50], J[54][54] must be edited. Since the converion of A to B is 1 to 1, then J[39][39] = -J[54][39]. The partial derivative obtained from this reaction is ADDED to the end of the entry if an entry already exists, and a new entry is created if one does not exist. The automatically created, incorrect term may already be there, this must be deleted for correct calculations.
+
