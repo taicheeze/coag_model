@@ -15,7 +15,7 @@ Once downloaded and extracted, configure with the following commands:
 
 ## Running the Current Model
 
-In order to run the model, run the following commands in the terminal:
+In order to run the model, run the following commands in the terminal, this should be the last steps **after** all modifications have been made:
 
 1. $ make coagulationo3
 2. $ make runcoagulation
@@ -195,3 +195,6 @@ or
 if(t >= 4000 && AP==0)
 
 To adjust when the intervention is applied, change the value after "t>=", in this example, the intervention is applied after 4000 seconds.
+
+# Additional Information
+The file Coagulation.tmp can be opened to see what which timesteps have been solved, scroll to the bottom to see the last timestep that was solved.
