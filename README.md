@@ -1,5 +1,5 @@
 # Introduction
-This is the repository for the 2D model for coagulation used by Petzold Group researchers at UCSB. The code was developed by Dr. Sheng Wu and Dr. Matthew Buoni during their time at UCSB. This README was written by Tie Bo Wu and can be contacted via e-mail: tiebo(at)outlook(dot)com
+This is the repository for the 2D model for coagulation used by Petzold Group researchers at UCSB. The code was developed by Dr. Sheng Wu and Dr. Matthew Buoni during their time at UCSB. The current model for coagulation was created by Tie Bo Wu. This README was written by Tie Bo Wu and can be contacted via e-mail: tiebo(at)outlook(dot)com. 
 
 ## Download and install petsc
 This model uses PETSc as its solver. This code was originally run with petsc version 3.4.0, and we cannot guarantee that it will work with the same efficiency with current or future versions of petsc. PETSc can be downloaded from the [official website](https://www.mcs.anl.gov/petsc/download/index.html)
