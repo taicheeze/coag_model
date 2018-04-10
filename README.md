@@ -113,6 +113,8 @@ The max timestep in the solver is set to 1 second, however, outputting the conce
 
 If you simply want to run the same model again, but with different initial conditions, you do not need to generate a new model. Simply modify the InitialConcentrations.h file and change the values in the concentration arrays. There will be a string array above the number array that specifies which element corresponds to which species. There is a value array for the initial concentrations of fluid species, as well as arrays for each patch of surface species. All values are in SI units, so mol/m^3.
 
+After your changes, save InitialConcentration.h then $make coagulationo3 followed by $make runcoagulation to run the simulation.
+
 # Modifying Other Model Parameters
 
 Most of the other modifications to the model are done from the Settings.h file. We will only cover the lines we recommend editing in this readme file. For the modifications in this section, open the 'Settings.h' file.
