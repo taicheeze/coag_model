@@ -15,7 +15,7 @@ Once downloaded and extracted, configure with the following commands:
 
 ## Running the Current Model
 
-In order to run the model, run the following commands in the terminal, this should be the last steps **after** all modifications have been made:
+In order to run the model, run the following commands in the terminal, these should be the last steps **after** all modifications have been made:
 
 1. $ make coagulationo3
 2. $ make runcoagulation
