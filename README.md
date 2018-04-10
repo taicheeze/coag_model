@@ -22,10 +22,15 @@ In order to run the model, run the following commands in the terminal, this shou
 
 ## Analyzing data
 
-After running the model, the data will be stored in the folder ./output unless specified elsewhere. The data is saved as a .m file to be parsed with MATLAB using the MATLAB function *custom_solver_data_analysis_general* The syntax for this function is as follows:
+After running the model, the data will be stored in the folder ./output unless specified elsewhere. The data is saved as a .m file to be parsed with MATLAB using the MATLAB function *custom_solver_data_analysis_general*. 
+
+The syntax for this function is as follows:
 [t_list, conc_list, species_list, x, y, dx, dy] = custom_solver_data_analysis_general(number_of_intervals) where t_list is the time vector, conc_list is the species concentrations in a cell array, species list a cell array of output species names, x, y, dx and dy are coordinates and intervals of the mesh.
+
 If you want average values over an area/line, rather than concentrations at every node, you can use the *coag_plot* MATLAB function to do this calculation. The syntax for the command is:
+
 [t1, y] = coag_plot(C,t,species_list,dx,dy,cutoff,xrange,x,yrange,y)
+
 where t1, and y are your output time and concentration arrays, C is the concentration cell array that is output from *custom_solver_data_analysis_general*, same with t, species_list, dx, x and y. xrange and yrange are two element vectors in the form [min_val max_val], cutoff is the index of the last volume species in the species list, since surface species have to be averaged over a line rather than an area.
 
 # Creating your own model
@@ -103,6 +108,10 @@ The max timestep in the solver is set to 1 second, however, outputting the conce
 
 1. In the main model directory, locate the file 'Settings.h' and open it.
 2. Locate the line that begins: "#define OUTPUT_DT" and edit the value on the same line to reflect the frequency at which to store output data.
+
+# Modifying Initial Conditions
+
+If you simply want to run the same model again, but with different initial conditions, you do not need to generate a new model. Simply modify the InitialConcentrations.h file and change the values in the concentration arrays. There will be a string array above the number array that specifies which element corresponds to which species. There is a value array for the initial concentrations of fluid species, as well as arrays for each patch of surface species. All values are in SI units, so mol/m^3.
 
 # Modifying Other Model Parameters
 
